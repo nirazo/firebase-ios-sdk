@@ -155,18 +155,7 @@ NS_ASSUME_NONNULL_BEGIN
 
     _app = app;
 
-    FSTPreConverterBlock block = ^id _Nullable(id _Nullable input) {
-      if ([input isKindOfClass:[FIRDocumentReference class]]) {
-        FIRDocumentReference *documentReference = (FIRDocumentReference *)input;
-        return [[FSTDocumentKeyReference alloc] initWithKey:documentReference.key
-                                                 databaseID:documentReference.firestore.databaseID];
-      } else {
-        return input;
-      }
-    };
-
-    _dataConverter = [[FSTUserDataConverter alloc] initWithDatabaseID:&_firestore->database_id()
-                                                         preConverter:block];
+    _dataConverter = [[FSTUserDataConverter alloc] initWithDatabaseID:&_firestore->database_id()];
     // Use the property setter so the default settings get plumbed into _firestoreClient.
     self.settings = [[FIRFirestoreSettings alloc] init];
   }

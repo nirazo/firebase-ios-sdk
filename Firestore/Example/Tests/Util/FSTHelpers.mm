@@ -134,11 +134,7 @@ NSDateComponents *FSTTestDateComponents(
 FSTUserDataConverter *FSTTestUserDataConverter() {
   // This owns the DatabaseIds since we do not have FirestoreClient instance to own them.
   static DatabaseId database_id{"project", DatabaseId::kDefault};
-  FSTUserDataConverter *converter =
-      [[FSTUserDataConverter alloc] initWithDatabaseID:&database_id
-                                          preConverter:^id _Nullable(id _Nullable input) {
-                                            return input;
-                                          }];
+  FSTUserDataConverter *converter = [[FSTUserDataConverter alloc] initWithDatabaseID:&database_id];
   return converter;
 }
 

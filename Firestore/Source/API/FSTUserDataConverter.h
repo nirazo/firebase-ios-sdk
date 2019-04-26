@@ -29,20 +29,12 @@ namespace model = firebase::firestore::model;
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * An interface that allows arbitrary pre-converting of user data.
- *
- * Returns the converted value (can return back the input to act as a no-op).
- */
-typedef id _Nullable (^FSTPreConverterBlock)(id _Nullable);
-
-/**
  * Helper for parsing raw user input (provided via the API) into internal model classes.
  */
 @interface FSTUserDataConverter : NSObject
 
 - (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithDatabaseID:(const model::DatabaseId *)databaseID
-                      preConverter:(FSTPreConverterBlock)preConverter NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithDatabaseID:(const model::DatabaseId *)databaseID NS_DESIGNATED_INITIALIZER;
 
 /** Parse document data from a non-merge setData call.*/
 - (core::ParsedSetData)parsedSetData:(id)input;
