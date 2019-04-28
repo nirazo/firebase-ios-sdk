@@ -37,6 +37,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (GULMutableDictionary *)interceptors;
 
+#ifdef DEBUG
+#define GUL_APP_DELEGATE_TESTING
+#endif
+
 #ifdef GUL_APP_DELEGATE_TESTING  // Methods only used in tests.
 
 /** Deletes all the registered interceptors. */

@@ -19,6 +19,10 @@
 #import <GoogleUtilities/GULLogger.h>
 #import "../Common/GULLoggerCodes.h"
 
+#ifdef DEBUG
+#define GUL_UNSWIZZLING_ENABLED
+#endif
+
 #ifdef GUL_UNSWIZZLING_ENABLED
 #import <GoogleUtilities/GULSwizzlingCache.h>
 // We need a private method for an assert.
