@@ -29,6 +29,7 @@
 #import "Firestore/Source/API/FIRFieldPath+Internal.h"
 #import "Firestore/Source/API/FIRFieldValue+Internal.h"
 #import "Firestore/Source/API/FIRFirestore+Internal.h"
+#import "Firestore/Source/API/FSTDocumentKeyReference.h"
 #import "Firestore/Source/Model/FSTFieldValue.h"
 #import "Firestore/Source/Model/FSTMutation.h"
 
@@ -66,29 +67,6 @@ using firebase::firestore::model::ServerTimestampTransform;
 using firebase::firestore::model::TransformOperation;
 
 NS_ASSUME_NONNULL_BEGIN
-
-#pragma mark - FSTDocumentKeyReference
-
-@implementation FSTDocumentKeyReference {
-  DocumentKey _key;
-}
-
-- (instancetype)initWithKey:(DocumentKey)key databaseID:(const DatabaseId *)databaseID {
-  self = [super init];
-  if (self) {
-    _key = std::move(key);
-    _databaseID = databaseID;
-  }
-  return self;
-}
-
-- (const firebase::firestore::model::DocumentKey &)key {
-  return _key;
-}
-
-@end
-
-#pragma mark - FSTUserDataConverter
 
 @interface FSTUserDataConverter ()
 // Does not own the DatabaseId instance.
