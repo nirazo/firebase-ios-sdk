@@ -274,8 +274,7 @@ static BOOL gRespondsToHandleBackgroundSession;
 
 - (void)setUp {
   [super setUp];
-  self.mockSharedApplication = OCMClassMock([UIApplication class]);
-  OCMStub([self.mockSharedApplication sharedApplication]).andReturn(self.mockSharedApplication);
+  self.mockSharedApplication = OCMPartialMock([UIApplication sharedApplication]);
 }
 
 - (void)tearDown {
