@@ -440,15 +440,16 @@ FSTFieldValue* ObjcUserDataConverter::ParseDocumentReference(FIRDocumentReferenc
 
 FSTFieldValue* ObjcUserDataConverter::ParseDocumentKeyReference(FSTDocumentKeyReference* ref,
                                                                 ParseContext&& context) const {
-  if (*ref.databaseID != *database_id_) {
-    const DatabaseId* other = ref.databaseID;
+  const DatabaseId& this_id = database_id();
+  const DatabaseId& other_id = *ref.databaseID;
+  if (this_id != other_id) {
     ThrowInvalidArgument(
         "Document Reference is for database %s/%s but should be for database %s/%s%s",
-        other->project_id(), other->database_id(), database_id_->project_id(),
-        database_id_->database_id(), context.FieldDescription());
+        other_id.project_id(), other_id.database_id(), this_id.project_id(), this_id.database_id(),
+        context.FieldDescription());
   }
   return [FSTReferenceValue referenceValue:[FSTDocumentKey keyWithDocumentKey:ref.key]
-                                databaseID:database_id_];
+                                databaseID:&this_id];
 }
 
 std::vector<FSTFieldValue*> ObjcUserDataConverter::ParseArrayTransformElements(

@@ -17,6 +17,7 @@
 #import "Firestore/Source/API/FSTUserDataConverter.h"
 
 #include <memory>
+#include <utility>
 
 #import "Firestore/Source/API/objc_user_data_converter.h"
 
@@ -40,12 +41,20 @@ using Objc = firebase::firestore::api::ObjcUserData;
   std::shared_ptr<UserDataConverter> _wrapped;
 }
 
-- (instancetype)initWithDatabaseID:(const DatabaseId *)databaseID {
+- (instancetype)initWithConverter:(std::shared_ptr<ObjcUserDataConverter>)converter {
   self = [super init];
   if (self) {
-    _wrapped = std::make_shared<ObjcUserDataConverter>(databaseID);
+    _wrapped = converter;
   }
   return self;
+}
+
+- (instancetype)initWithDatabaseID:(DatabaseId)databaseID {
+  return [self initWithConverter:std::make_shared<ObjcUserDataConverter>(std::move(databaseID))];
+}
+
+- (const DatabaseId &)databaseID {
+  return _wrapped->database_id();
 }
 
 - (ParsedSetData)parsedSetData:(id)input {

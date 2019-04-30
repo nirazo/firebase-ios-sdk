@@ -47,22 +47,24 @@ namespace firestore {
 namespace api {
 
 class DocumentReference;
+class UserDataConverter;
 class WriteBatch;
 
 class Firestore : public std::enable_shared_from_this<Firestore> {
  public:
   Firestore() = default;
 
-  Firestore(std::string project_id,
-            std::string database,
-            std::string persistence_key,
+  Firestore(std::string persistence_key,
+            std::shared_ptr<UserDataConverter> data_converter,
             std::unique_ptr<auth::CredentialsProvider> credentials_provider,
             std::unique_ptr<util::AsyncQueue> worker_queue,
             void* extension);
 
-  const model::DatabaseId& database_id() const {
-    return database_id_;
+  const std::shared_ptr<UserDataConverter>& data_converter() const {
+    return data_converter_;
   }
+
+  const model::DatabaseId& database_id() const;
 
   const std::string& persistence_key() const {
     return persistence_key_;
@@ -97,7 +99,7 @@ class Firestore : public std::enable_shared_from_this<Firestore> {
  private:
   void EnsureClientConfigured();
 
-  model::DatabaseId database_id_;
+  std::shared_ptr<UserDataConverter> data_converter_;
   std::unique_ptr<auth::CredentialsProvider> credentials_provider_;
   std::string persistence_key_;
   objc::Handle<FSTFirestoreClient> client_;

@@ -16,6 +16,10 @@
 
 #import <Foundation/Foundation.h>
 
+#include <memory>
+
+#import "Firestore/Source/API/objc_user_data_converter.h"
+
 #include "Firestore/core/src/firebase/firestore/core/user_data.h"
 #include "Firestore/core/src/firebase/firestore/model/database_id.h"
 
@@ -23,6 +27,7 @@
 @class FSTFieldValue;
 @class FSTMutation;
 
+namespace api = firebase::firestore::api;
 namespace core = firebase::firestore::core;
 namespace model = firebase::firestore::model;
 
@@ -33,8 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface FSTUserDataConverter : NSObject
 
+- (instancetype)initWithConverter:(std::shared_ptr<api::ObjcUserDataConverter>)converter
+    NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithDatabaseID:(model::DatabaseId)databaseID;
 - (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithDatabaseID:(const model::DatabaseId *)databaseID NS_DESIGNATED_INITIALIZER;
+
+- (const model::DatabaseId &)databaseID;
 
 /** Parse document data from a non-merge setData call.*/
 - (core::ParsedSetData)parsedSetData:(id)input;

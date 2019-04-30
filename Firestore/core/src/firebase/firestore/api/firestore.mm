@@ -26,6 +26,7 @@
 
 #include "Firestore/core/src/firebase/firestore/api/document_reference.h"
 #include "Firestore/core/src/firebase/firestore/api/settings.h"
+#include "Firestore/core/src/firebase/firestore/api/user_data_converter.h"
 #include "Firestore/core/src/firebase/firestore/api/write_batch.h"
 #include "Firestore/core/src/firebase/firestore/auth/firebase_credentials_provider_apple.h"
 #include "Firestore/core/src/firebase/firestore/core/transaction.h"
@@ -51,17 +52,20 @@ using util::Executor;
 using util::ExecutorLibdispatch;
 using util::Status;
 
-Firestore::Firestore(std::string project_id,
-                     std::string database,
-                     std::string persistence_key,
+Firestore::Firestore(std::string persistence_key,
+                     std::shared_ptr<UserDataConverter> data_converter,
                      std::unique_ptr<CredentialsProvider> credentials_provider,
                      std::unique_ptr<AsyncQueue> worker_queue,
                      void* extension)
-    : database_id_{std::move(project_id), std::move(database)},
+    : data_converter_{data_converter},
       credentials_provider_{std::move(credentials_provider)},
       persistence_key_{std::move(persistence_key)},
       worker_queue_{std::move(worker_queue)},
       extension_{extension} {
+}
+
+const model::DatabaseId& Firestore::database_id() const {
+  return data_converter_->database_id();
 }
 
 FSTFirestoreClient* Firestore::client() {
@@ -165,8 +169,8 @@ void Firestore::EnsureClientConfigured() {
   std::lock_guard<std::mutex> lock{mutex_};
 
   if (!client_) {
-    DatabaseInfo database_info(database_id_, persistence_key_, settings_.host(),
-                               settings_.ssl_enabled());
+    DatabaseInfo database_info(database_id(), persistence_key_,
+                               settings_.host(), settings_.ssl_enabled());
 
     HARD_ASSERT(worker_queue_, "Expected non-null worker queue");
     client_ =

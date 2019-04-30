@@ -52,6 +52,7 @@
 namespace util = firebase::firestore::util;
 using firebase::firestore::api::DocumentReference;
 using firebase::firestore::api::Firestore;
+using firebase::firestore::api::ObjcUserDataConverter;
 using firebase::firestore::api::ThrowIllegalState;
 using firebase::firestore::api::ThrowInvalidArgument;
 using firebase::firestore::auth::CredentialsProvider;
@@ -149,13 +150,16 @@ NS_ASSUME_NONNULL_BEGIN
                       workerQueue:(std::unique_ptr<AsyncQueue>)workerQueue
                       firebaseApp:(FIRApp *)app {
   if (self = [super init]) {
-    _firestore = std::make_shared<Firestore>(
-        std::move(projectID), std::move(database), std::move(persistenceKey),
-        std::move(credentialsProvider), std::move(workerQueue), (__bridge void *)self);
+    DatabaseId databaseId(std::move(projectID), std::move(database));
+    auto dataConverter = std::make_shared<ObjcUserDataConverter>(std::move(databaseId));
+    _dataConverter = [[FSTUserDataConverter alloc] initWithConverter:dataConverter];
+
+    _firestore = std::make_shared<Firestore>(std::move(persistenceKey), dataConverter,
+                                             std::move(credentialsProvider), std::move(workerQueue),
+                                             (__bridge void *)self);
 
     _app = app;
 
-    _dataConverter = [[FSTUserDataConverter alloc] initWithDatabaseID:&_firestore->database_id()];
     // Use the property setter so the default settings get plumbed into _firestoreClient.
     self.settings = [[FIRFirestoreSettings alloc] init];
   }

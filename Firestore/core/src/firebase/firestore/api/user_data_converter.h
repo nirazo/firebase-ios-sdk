@@ -17,6 +17,8 @@
 #ifndef FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_API_USER_DATA_CONVERTER_H_
 #define FIRESTORE_CORE_SRC_FIREBASE_FIRESTORE_API_USER_DATA_CONVERTER_H_
 
+#include <utility>
+
 #include "Firestore/core/src/firebase/firestore/model/database_id.h"
 #include "Firestore/core/src/firebase/firestore/objc/objc_class.h"
 
@@ -68,8 +70,8 @@ class UserData {
  */
 class UserDataConverter {
  public:
-  explicit UserDataConverter(const model::DatabaseId* database_id)
-      : database_id_(database_id) {
+  explicit UserDataConverter(model::DatabaseId database_id)
+      : database_id_(std::move(database_id)) {
   }
 
   virtual ~UserDataConverter() {
@@ -95,8 +97,12 @@ class UserDataConverter {
   /** Parses user data for an argument to a Query function. */
   virtual FSTFieldValue* ParseQueryValue(const UserData& input) const = 0;
 
- protected:
-  const model::DatabaseId* database_id_;
+  const model::DatabaseId& database_id() const {
+    return database_id_;
+  }
+
+ private:
+  model::DatabaseId database_id_;
 };
 
 }  // namespace api
