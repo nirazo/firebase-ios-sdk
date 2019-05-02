@@ -26,7 +26,7 @@
 #import "Firestore/Source/API/FIRFirestore+Internal.h"
 #import "Firestore/Source/API/FIRFirestoreSource+Internal.h"
 #import "Firestore/Source/API/FIRListenerRegistration+Internal.h"
-#import "Firestore/Source/API/FSTUserDataConverter.h"
+#import "Firestore/Source/API/objc_user_data_converter.h"
 #import "Firestore/Source/Core/FSTEventManager.h"
 #import "Firestore/Source/Core/FSTQuery.h"
 #import "Firestore/Source/Model/FSTFieldValue.h"
@@ -34,8 +34,10 @@
 #include "Firestore/core/src/firebase/firestore/api/document_reference.h"
 #include "Firestore/core/src/firebase/firestore/api/document_snapshot.h"
 #include "Firestore/core/src/firebase/firestore/api/input_validation.h"
+#include "Firestore/core/src/firebase/firestore/api/set_options.h"
 #include "Firestore/core/src/firebase/firestore/api/source.h"
 #include "Firestore/core/src/firebase/firestore/core/event_listener.h"
+#include "Firestore/core/src/firebase/firestore/core/user_data.h"
 #include "Firestore/core/src/firebase/firestore/model/document_key.h"
 #include "Firestore/core/src/firebase/firestore/model/document_set.h"
 #include "Firestore/core/src/firebase/firestore/model/resource_path.h"
@@ -50,9 +52,11 @@ using firebase::firestore::api::DocumentReference;
 using firebase::firestore::api::DocumentSnapshot;
 using firebase::firestore::api::Firestore;
 using firebase::firestore::api::ListenerRegistration;
+using firebase::firestore::api::SetOptions;
 using firebase::firestore::api::Source;
 using firebase::firestore::api::MakeSource;
 using firebase::firestore::api::ThrowInvalidArgument;
+using firebase::firestore::api::UserDataConverter;
 using firebase::firestore::core::EventListener;
 using firebase::firestore::core::ListenOptions;
 using firebase::firestore::core::ParsedSetData;
@@ -62,6 +66,8 @@ using firebase::firestore::model::ResourcePath;
 using firebase::firestore::util::Status;
 using firebase::firestore::util::StatusOr;
 using firebase::firestore::util::StatusOrCallback;
+
+using Objc = firebase::firestore::api::ObjcUserData;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -157,17 +163,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setData:(NSDictionary<NSString *, id> *)documentData
           merge:(BOOL)merge
      completion:(nullable void (^)(NSError *_Nullable error))completion {
-  auto dataConverter = self.firestore.dataConverter;
-  ParsedSetData parsed = merge ? [dataConverter parsedMergeData:documentData fieldMask:nil]
-                               : [dataConverter parsedSetData:documentData];
+  ParsedSetData parsed =
+      self.dataConverter.ParseSetData(Objc(documentData), SetOptions::Merge(merge));
   _documentReference.SetData(std::move(parsed), util::MakeCallback(completion));
 }
 
 - (void)setData:(NSDictionary<NSString *, id> *)documentData
     mergeFields:(NSArray<id> *)mergeFields
      completion:(nullable void (^)(NSError *_Nullable error))completion {
-  ParsedSetData parsed = [self.firestore.dataConverter parsedMergeData:documentData
-                                                             fieldMask:mergeFields];
+  ParsedSetData parsed = self.dataConverter.ParseSetData(Objc(documentData), Objc(mergeFields));
   _documentReference.SetData(std::move(parsed), util::MakeCallback(completion));
 }
 
@@ -177,7 +181,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)updateData:(NSDictionary<id, id> *)fields
         completion:(nullable void (^)(NSError *_Nullable error))completion {
-  ParsedUpdateData parsed = [self.firestore.dataConverter parsedUpdateData:fields];
+  ParsedUpdateData parsed = self.dataConverter.ParseUpdateData(Objc(fields));
   _documentReference.UpdateData(std::move(parsed), util::MakeCallback(completion));
 }
 
@@ -215,6 +219,10 @@ NS_ASSUME_NONNULL_BEGIN
   ListenerRegistration result = _documentReference.AddSnapshotListener(
       std::move(internalOptions), [self wrapDocumentSnapshotBlock:listener]);
   return [[FSTListenerRegistration alloc] initWithRegistration:std::move(result)];
+}
+
+- (const UserDataConverter &)dataConverter {
+  return *_documentReference.firestore()->data_converter();
 }
 
 - (DocumentSnapshot::Listener)wrapDocumentSnapshotBlock:(FIRDocumentSnapshotBlock)block {
