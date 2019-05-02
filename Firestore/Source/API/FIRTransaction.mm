@@ -24,21 +24,27 @@
 #import "Firestore/Source/API/FIRDocumentSnapshot+Internal.h"
 #import "Firestore/Source/API/FIRFirestore+Internal.h"
 #import "Firestore/Source/API/FIRTransaction+Internal.h"
-#import "Firestore/Source/API/FSTUserDataConverter.h"
+#import "Firestore/Source/API/objc_user_data_converter.h"
 #import "Firestore/Source/Model/FSTDocument.h"
 
 #include "Firestore/core/src/firebase/firestore/api/input_validation.h"
+#include "Firestore/core/src/firebase/firestore/api/set_options.h"
 #include "Firestore/core/src/firebase/firestore/core/transaction.h"
+#include "Firestore/core/src/firebase/firestore/core/user_data.h"
 #include "Firestore/core/src/firebase/firestore/util/error_apple.h"
 #include "Firestore/core/src/firebase/firestore/util/hard_assert.h"
 #include "Firestore/core/src/firebase/firestore/util/status.h"
 
+using firebase::firestore::api::SetOptions;
 using firebase::firestore::api::ThrowInvalidArgument;
+using firebase::firestore::api::UserDataConverter;
 using firebase::firestore::core::ParsedSetData;
 using firebase::firestore::core::ParsedUpdateData;
 using firebase::firestore::core::Transaction;
 using firebase::firestore::util::MakeNSError;
 using firebase::firestore::util::Status;
+
+using Objc = firebase::firestore::api::ObjcUserData;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -84,8 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
                 forDocument:(FIRDocumentReference *)document
                       merge:(BOOL)merge {
   [self validateReference:document];
-  ParsedSetData parsed = merge ? [self.firestore.dataConverter parsedMergeData:data fieldMask:nil]
-                               : [self.firestore.dataConverter parsedSetData:data];
+  ParsedSetData parsed = self.dataConverter.ParseSetData(Objc(data), SetOptions::Merge(merge));
   _internalTransaction->Set(document.key, std::move(parsed));
   return self;
 }
@@ -94,7 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
                 forDocument:(FIRDocumentReference *)document
                 mergeFields:(NSArray<id> *)mergeFields {
   [self validateReference:document];
-  ParsedSetData parsed = [self.firestore.dataConverter parsedMergeData:data fieldMask:mergeFields];
+  ParsedSetData parsed = self.dataConverter.ParseSetData(Objc(data), Objc(mergeFields));
   _internalTransaction->Set(document.key, std::move(parsed));
   return self;
 }
@@ -102,7 +107,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (FIRTransaction *)updateData:(NSDictionary<id, id> *)fields
                    forDocument:(FIRDocumentReference *)document {
   [self validateReference:document];
-  ParsedUpdateData parsed = [self.firestore.dataConverter parsedUpdateData:fields];
+  ParsedUpdateData parsed = self.dataConverter.ParseUpdateData(Objc(fields));
   _internalTransaction->Update(document.key, std::move(parsed));
   return self;
 }
@@ -168,6 +173,10 @@ NS_ASSUME_NONNULL_BEGIN
     *error = outerError;
   }
   return result;
+}
+
+- (const UserDataConverter &)dataConverter {
+  return *_firestore.wrapped->data_converter();
 }
 
 - (void)validateReference:(FIRDocumentReference *)reference {
