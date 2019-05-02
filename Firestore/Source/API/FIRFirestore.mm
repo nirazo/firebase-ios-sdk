@@ -218,8 +218,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (FIRWriteBatch *)batch {
-  return [FIRWriteBatch writeBatchWithDataConverter:self.dataConverter
-                                         writeBatch:_firestore->GetBatch()];
+  return [[FIRWriteBatch alloc] initWithDataConverter:self.wrapped->data_converter()
+                                           writeBatch:_firestore->GetBatch()];
 }
 
 - (void)runTransactionWithBlock:(id _Nullable (^)(FIRTransaction *, NSError **))updateBlock

@@ -17,49 +17,37 @@
 #import "Firestore/Source/API/FIRWriteBatch+Internal.h"
 
 #import "Firestore/Source/API/FIRDocumentReference+Internal.h"
-#import "Firestore/Source/API/FSTUserDataConverter.h"
+#import "Firestore/Source/API/objc_user_data_converter.h"
 
+#include "Firestore/core/src/firebase/firestore/api/set_options.h"
 #include "Firestore/core/src/firebase/firestore/api/write_batch.h"
+#include "Firestore/core/src/firebase/firestore/core/user_data.h"
 #include "Firestore/core/src/firebase/firestore/util/delayed_constructor.h"
 #include "Firestore/core/src/firebase/firestore/util/error_apple.h"
 
 namespace util = firebase::firestore::util;
+using firebase::firestore::api::SetOptions;
+using firebase::firestore::api::UserDataConverter;
 using firebase::firestore::core::ParsedSetData;
 using firebase::firestore::core::ParsedUpdateData;
 using firebase::firestore::model::Precondition;
+
+using Objc = firebase::firestore::api::ObjcUserData;
 
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - FIRWriteBatch
 
-@interface FIRWriteBatch ()
-
-- (instancetype)initWithDataConverter:(FSTUserDataConverter *)dataConverter
-                           writeBatch:(api::WriteBatch &&)writeBatch NS_DESIGNATED_INITIALIZER;
-
-@property(nonatomic, strong, readonly) FSTUserDataConverter *dataConverter;
-
-@end
-
-@implementation FIRWriteBatch (Internal)
-
-+ (instancetype)writeBatchWithDataConverter:(FSTUserDataConverter *)dataConverter
-                                 writeBatch:(api::WriteBatch &&)writeBatch {
-  return [[FIRWriteBatch alloc] initWithDataConverter:dataConverter
-                                           writeBatch:std::move(writeBatch)];
-}
-
-@end
-
 @implementation FIRWriteBatch {
+  std::shared_ptr<api::UserDataConverter> _dataConverter;
   util::DelayedConstructor<api::WriteBatch> _writeBatch;
 }
 
-- (instancetype)initWithDataConverter:(FSTUserDataConverter *)dataConverter
+- (instancetype)initWithDataConverter:(std::shared_ptr<api::UserDataConverter>)dataConverter
                            writeBatch:(api::WriteBatch &&)writeBatch {
   self = [super init];
   if (self) {
-    _dataConverter = dataConverter;
+    _dataConverter = std::move(dataConverter);
     _writeBatch.Init(std::move(writeBatch));
   }
   return self;
@@ -73,8 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (FIRWriteBatch *)setData:(NSDictionary<NSString *, id> *)data
                forDocument:(FIRDocumentReference *)document
                      merge:(BOOL)merge {
-  ParsedSetData parsed = merge ? [self.dataConverter parsedMergeData:data fieldMask:nil]
-                               : [self.dataConverter parsedSetData:data];
+  ParsedSetData parsed = self.dataConverter.ParseSetData(Objc(data), SetOptions::Merge(merge));
   _writeBatch->SetData(document.internalReference, std::move(parsed));
 
   return self;
@@ -83,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (FIRWriteBatch *)setData:(NSDictionary<NSString *, id> *)data
                forDocument:(FIRDocumentReference *)document
                mergeFields:(NSArray<id> *)mergeFields {
-  ParsedSetData parsed = [self.dataConverter parsedMergeData:data fieldMask:mergeFields];
+  ParsedSetData parsed = self.dataConverter.ParseSetData(Objc(data), Objc(mergeFields));
   _writeBatch->SetData(document.internalReference, std::move(parsed));
 
   return self;
@@ -91,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (FIRWriteBatch *)updateData:(NSDictionary<id, id> *)fields
                   forDocument:(FIRDocumentReference *)document {
-  ParsedUpdateData parsed = [self.dataConverter parsedUpdateData:fields];
+  ParsedUpdateData parsed = self.dataConverter.ParseUpdateData(Objc(fields));
   _writeBatch->UpdateData(document.internalReference, std::move(parsed));
 
   return self;
@@ -109,6 +96,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)commitWithCompletion:(nullable void (^)(NSError *_Nullable error))completion {
   _writeBatch->Commit(util::MakeCallback(completion));
+}
+
+- (const UserDataConverter &)dataConverter {
+  return *_dataConverter;
 }
 
 @end

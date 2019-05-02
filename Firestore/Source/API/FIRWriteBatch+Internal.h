@@ -18,18 +18,19 @@
 
 #import <Foundation/Foundation.h>
 
-#include "Firestore/core/src/firebase/firestore/api/write_batch.h"
+#include <memory>
 
-@class FSTUserDataConverter;
+#include "Firestore/core/src/firebase/firestore/api/user_data_converter.h"
+#include "Firestore/core/src/firebase/firestore/api/write_batch.h"
 
 namespace api = firebase::firestore::api;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FIRWriteBatch (Internal)
+@interface FIRWriteBatch (/* Init */)
 
-+ (instancetype)writeBatchWithDataConverter:(FSTUserDataConverter *)dataConverter
-                                 writeBatch:(api::WriteBatch &&)writeBatch;
+- (instancetype)initWithDataConverter:(std::shared_ptr<api::UserDataConverter>)dataConverter
+                           writeBatch:(api::WriteBatch &&)writeBatch NS_DESIGNATED_INITIALIZER;
 
 @end
 
