@@ -30,8 +30,8 @@ ExternalProject_Add(
     grpc-download
 
   DOWNLOAD_DIR ${FIREBASE_DOWNLOAD_DIR}
-  URL https://github.com/c-ares/c-ares/archive/cares-1_14_0.tar.gz
-  URL_HASH SHA256=62dd12f0557918f89ad6f5b759f0bf4727174ae9979499f5452c02be38d9d3e8
+  URL https://github.com/c-ares/c-ares/archive/cares-1_15_0.tar.gz
+  URL_HASH SHA256=7deb7872cbd876c29036d5f37e30c4cbc3cc068d59d8b749ef85bb0736649f04
 
   PREFIX ${PROJECT_BINARY_DIR}
   SOURCE_DIR ${PROJECT_BINARY_DIR}/src/grpc/third_party/cares/cares
