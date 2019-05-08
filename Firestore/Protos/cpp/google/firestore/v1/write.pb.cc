@@ -22,34 +22,36 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
-#include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
+
+extern PROTOBUF_INTERNAL_EXPORT_google_2ffirestore_2fv1_2fcommon_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_DocumentMask_google_2ffirestore_2fv1_2fcommon_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2ffirestore_2fv1_2fcommon_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Precondition_google_2ffirestore_2fv1_2fcommon_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2ffirestore_2fv1_2fdocument_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_ArrayValue_google_2ffirestore_2fv1_2fdocument_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2ffirestore_2fv1_2fdocument_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_Document_google_2ffirestore_2fv1_2fdocument_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2ffirestore_2fv1_2fwrite_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_DocumentTransform_FieldTransform_google_2ffirestore_2fv1_2fwrite_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2ffirestore_2fv1_2fwrite_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_DocumentTransform_google_2ffirestore_2fv1_2fwrite_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto;
 namespace google {
 namespace firestore {
 namespace v1 {
 class WriteDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Write>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<Write> _instance;
   const ::google::firestore::v1::Document* update_;
   ::google::protobuf::internal::ArenaStringPtr delete__;
   const ::google::firestore::v1::DocumentTransform* transform_;
 } _Write_default_instance_;
 class DocumentTransform_FieldTransformDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<DocumentTransform_FieldTransform>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<DocumentTransform_FieldTransform> _instance;
   int set_to_server_value_;
   const ::google::firestore::v1::Value* increment_;
   const ::google::firestore::v1::Value* maximum_;
@@ -59,50 +61,34 @@ class DocumentTransform_FieldTransformDefaultTypeInternal {
 } _DocumentTransform_FieldTransform_default_instance_;
 class DocumentTransformDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<DocumentTransform>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<DocumentTransform> _instance;
 } _DocumentTransform_default_instance_;
 class WriteResultDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<WriteResult>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<WriteResult> _instance;
 } _WriteResult_default_instance_;
 class DocumentChangeDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<DocumentChange>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<DocumentChange> _instance;
 } _DocumentChange_default_instance_;
 class DocumentDeleteDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<DocumentDelete>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<DocumentDelete> _instance;
 } _DocumentDelete_default_instance_;
 class DocumentRemoveDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<DocumentRemove>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<DocumentRemove> _instance;
 } _DocumentRemove_default_instance_;
 class ExistenceFilterDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ExistenceFilter>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<ExistenceFilter> _instance;
 } _ExistenceFilter_default_instance_;
 }  // namespace v1
 }  // namespace firestore
 }  // namespace google
-namespace protobuf_google_2ffirestore_2fv1_2fwrite_2eproto {
-void InitDefaultsWriteImpl() {
+static void InitDefaultsWrite_google_2ffirestore_2fv1_2fwrite_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_google_2ffirestore_2fv1_2fdocument_2eproto::InitDefaultsDocument();
-  protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentTransform();
-  protobuf_google_2ffirestore_2fv1_2fcommon_2eproto::InitDefaultsDocumentMask();
-  protobuf_google_2ffirestore_2fv1_2fcommon_2eproto::InitDefaultsPrecondition();
   {
     void* ptr = &::google::firestore::v1::_Write_default_instance_;
     new (ptr) ::google::firestore::v1::Write();
@@ -111,20 +97,16 @@ void InitDefaultsWriteImpl() {
   ::google::firestore::v1::Write::InitAsDefaultInstance();
 }
 
-void InitDefaultsWrite() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsWriteImpl);
-}
+::google::protobuf::internal::SCCInfo<4> scc_info_Write_google_2ffirestore_2fv1_2fwrite_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsWrite_google_2ffirestore_2fv1_2fwrite_2eproto}, {
+      &scc_info_Document_google_2ffirestore_2fv1_2fdocument_2eproto.base,
+      &scc_info_DocumentTransform_google_2ffirestore_2fv1_2fwrite_2eproto.base,
+      &scc_info_DocumentMask_google_2ffirestore_2fv1_2fcommon_2eproto.base,
+      &scc_info_Precondition_google_2ffirestore_2fv1_2fcommon_2eproto.base,}};
 
-void InitDefaultsDocumentTransform_FieldTransformImpl() {
+static void InitDefaultsDocumentTransform_FieldTransform_google_2ffirestore_2fv1_2fwrite_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_google_2ffirestore_2fv1_2fdocument_2eproto::InitDefaultsArrayValue();
   {
     void* ptr = &::google::firestore::v1::_DocumentTransform_FieldTransform_default_instance_;
     new (ptr) ::google::firestore::v1::DocumentTransform_FieldTransform();
@@ -133,20 +115,13 @@ void InitDefaultsDocumentTransform_FieldTransformImpl() {
   ::google::firestore::v1::DocumentTransform_FieldTransform::InitAsDefaultInstance();
 }
 
-void InitDefaultsDocumentTransform_FieldTransform() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsDocumentTransform_FieldTransformImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_DocumentTransform_FieldTransform_google_2ffirestore_2fv1_2fwrite_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsDocumentTransform_FieldTransform_google_2ffirestore_2fv1_2fwrite_2eproto}, {
+      &scc_info_ArrayValue_google_2ffirestore_2fv1_2fdocument_2eproto.base,}};
 
-void InitDefaultsDocumentTransformImpl() {
+static void InitDefaultsDocumentTransform_google_2ffirestore_2fv1_2fwrite_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentTransform_FieldTransform();
   {
     void* ptr = &::google::firestore::v1::_DocumentTransform_default_instance_;
     new (ptr) ::google::firestore::v1::DocumentTransform();
@@ -155,21 +130,13 @@ void InitDefaultsDocumentTransformImpl() {
   ::google::firestore::v1::DocumentTransform::InitAsDefaultInstance();
 }
 
-void InitDefaultsDocumentTransform() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsDocumentTransformImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_DocumentTransform_google_2ffirestore_2fv1_2fwrite_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsDocumentTransform_google_2ffirestore_2fv1_2fwrite_2eproto}, {
+      &scc_info_DocumentTransform_FieldTransform_google_2ffirestore_2fv1_2fwrite_2eproto.base,}};
 
-void InitDefaultsWriteResultImpl() {
+static void InitDefaultsWriteResult_google_2ffirestore_2fv1_2fwrite_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_google_2fprotobuf_2ftimestamp_2eproto::InitDefaultsTimestamp();
-  protobuf_google_2ffirestore_2fv1_2fdocument_2eproto::InitDefaultsArrayValue();
   {
     void* ptr = &::google::firestore::v1::_WriteResult_default_instance_;
     new (ptr) ::google::firestore::v1::WriteResult();
@@ -178,20 +145,14 @@ void InitDefaultsWriteResultImpl() {
   ::google::firestore::v1::WriteResult::InitAsDefaultInstance();
 }
 
-void InitDefaultsWriteResult() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsWriteResultImpl);
-}
+::google::protobuf::internal::SCCInfo<2> scc_info_WriteResult_google_2ffirestore_2fv1_2fwrite_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsWriteResult_google_2ffirestore_2fv1_2fwrite_2eproto}, {
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
+      &scc_info_ArrayValue_google_2ffirestore_2fv1_2fdocument_2eproto.base,}};
 
-void InitDefaultsDocumentChangeImpl() {
+static void InitDefaultsDocumentChange_google_2ffirestore_2fv1_2fwrite_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_google_2ffirestore_2fv1_2fdocument_2eproto::InitDefaultsDocument();
   {
     void* ptr = &::google::firestore::v1::_DocumentChange_default_instance_;
     new (ptr) ::google::firestore::v1::DocumentChange();
@@ -200,20 +161,13 @@ void InitDefaultsDocumentChangeImpl() {
   ::google::firestore::v1::DocumentChange::InitAsDefaultInstance();
 }
 
-void InitDefaultsDocumentChange() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsDocumentChangeImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_DocumentChange_google_2ffirestore_2fv1_2fwrite_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsDocumentChange_google_2ffirestore_2fv1_2fwrite_2eproto}, {
+      &scc_info_Document_google_2ffirestore_2fv1_2fdocument_2eproto.base,}};
 
-void InitDefaultsDocumentDeleteImpl() {
+static void InitDefaultsDocumentDelete_google_2ffirestore_2fv1_2fwrite_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_google_2fprotobuf_2ftimestamp_2eproto::InitDefaultsTimestamp();
   {
     void* ptr = &::google::firestore::v1::_DocumentDelete_default_instance_;
     new (ptr) ::google::firestore::v1::DocumentDelete();
@@ -222,20 +176,13 @@ void InitDefaultsDocumentDeleteImpl() {
   ::google::firestore::v1::DocumentDelete::InitAsDefaultInstance();
 }
 
-void InitDefaultsDocumentDelete() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsDocumentDeleteImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_DocumentDelete_google_2ffirestore_2fv1_2fwrite_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsDocumentDelete_google_2ffirestore_2fv1_2fwrite_2eproto}, {
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,}};
 
-void InitDefaultsDocumentRemoveImpl() {
+static void InitDefaultsDocumentRemove_google_2ffirestore_2fv1_2fwrite_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_google_2fprotobuf_2ftimestamp_2eproto::InitDefaultsTimestamp();
   {
     void* ptr = &::google::firestore::v1::_DocumentRemove_default_instance_;
     new (ptr) ::google::firestore::v1::DocumentRemove();
@@ -244,19 +191,13 @@ void InitDefaultsDocumentRemoveImpl() {
   ::google::firestore::v1::DocumentRemove::InitAsDefaultInstance();
 }
 
-void InitDefaultsDocumentRemove() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsDocumentRemoveImpl);
-}
+::google::protobuf::internal::SCCInfo<1> scc_info_DocumentRemove_google_2ffirestore_2fv1_2fwrite_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsDocumentRemove_google_2ffirestore_2fv1_2fwrite_2eproto}, {
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,}};
 
-void InitDefaultsExistenceFilterImpl() {
+static void InitDefaultsExistenceFilter_google_2ffirestore_2fv1_2fwrite_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
     void* ptr = &::google::firestore::v1::_ExistenceFilter_default_instance_;
     new (ptr) ::google::firestore::v1::ExistenceFilter();
@@ -265,86 +206,96 @@ void InitDefaultsExistenceFilterImpl() {
   ::google::firestore::v1::ExistenceFilter::InitAsDefaultInstance();
 }
 
-void InitDefaultsExistenceFilter() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsExistenceFilterImpl);
+::google::protobuf::internal::SCCInfo<0> scc_info_ExistenceFilter_google_2ffirestore_2fv1_2fwrite_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsExistenceFilter_google_2ffirestore_2fv1_2fwrite_2eproto}, {}};
+
+void InitDefaults_google_2ffirestore_2fv1_2fwrite_2eproto() {
+  ::google::protobuf::internal::InitSCC(&scc_info_Write_google_2ffirestore_2fv1_2fwrite_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_DocumentTransform_FieldTransform_google_2ffirestore_2fv1_2fwrite_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_DocumentTransform_google_2ffirestore_2fv1_2fwrite_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_WriteResult_google_2ffirestore_2fv1_2fwrite_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_DocumentChange_google_2ffirestore_2fv1_2fwrite_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_DocumentDelete_google_2ffirestore_2fv1_2fwrite_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_DocumentRemove_google_2ffirestore_2fv1_2fwrite_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ExistenceFilter_google_2ffirestore_2fv1_2fwrite_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[8];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
+::google::protobuf::Metadata file_level_metadata_google_2ffirestore_2fv1_2fwrite_2eproto[8];
+const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_google_2ffirestore_2fv1_2fwrite_2eproto[1];
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_google_2ffirestore_2fv1_2fwrite_2eproto = nullptr;
 
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const ::google::protobuf::uint32 TableStruct_google_2ffirestore_2fv1_2fwrite_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::Write, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::Write, _internal_metadata_),
   ~0u,  // no _extensions_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::Write, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::Write, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
   offsetof(::google::firestore::v1::WriteDefaultTypeInternal, update_),
   offsetof(::google::firestore::v1::WriteDefaultTypeInternal, delete__),
   offsetof(::google::firestore::v1::WriteDefaultTypeInternal, transform_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::Write, update_mask_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::Write, current_document_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::Write, operation_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::Write, update_mask_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::Write, current_document_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::Write, operation_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentTransform_FieldTransform, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentTransform_FieldTransform, _internal_metadata_),
   ~0u,  // no _extensions_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentTransform_FieldTransform, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentTransform_FieldTransform, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentTransform_FieldTransform, field_path_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentTransform_FieldTransform, field_path_),
   offsetof(::google::firestore::v1::DocumentTransform_FieldTransformDefaultTypeInternal, set_to_server_value_),
   offsetof(::google::firestore::v1::DocumentTransform_FieldTransformDefaultTypeInternal, increment_),
   offsetof(::google::firestore::v1::DocumentTransform_FieldTransformDefaultTypeInternal, maximum_),
   offsetof(::google::firestore::v1::DocumentTransform_FieldTransformDefaultTypeInternal, minimum_),
   offsetof(::google::firestore::v1::DocumentTransform_FieldTransformDefaultTypeInternal, append_missing_elements_),
   offsetof(::google::firestore::v1::DocumentTransform_FieldTransformDefaultTypeInternal, remove_all_from_array_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentTransform_FieldTransform, transform_type_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentTransform_FieldTransform, transform_type_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentTransform, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentTransform, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentTransform, document_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentTransform, field_transforms_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentTransform, document_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentTransform, field_transforms_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::WriteResult, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::WriteResult, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::WriteResult, update_time_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::WriteResult, transform_results_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::WriteResult, update_time_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::WriteResult, transform_results_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentChange, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentChange, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentChange, document_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentChange, target_ids_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentChange, removed_target_ids_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentChange, document_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentChange, target_ids_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentChange, removed_target_ids_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentDelete, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentDelete, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentDelete, document_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentDelete, removed_target_ids_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentDelete, read_time_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentDelete, document_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentDelete, removed_target_ids_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentDelete, read_time_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentRemove, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentRemove, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentRemove, document_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentRemove, removed_target_ids_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::DocumentRemove, read_time_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentRemove, document_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentRemove, removed_target_ids_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::DocumentRemove, read_time_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::ExistenceFilter, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::ExistenceFilter, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::ExistenceFilter, target_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::google::firestore::v1::ExistenceFilter, count_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::ExistenceFilter, target_id_),
+  PROTOBUF_FIELD_OFFSET(::google::firestore::v1::ExistenceFilter, count_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::google::firestore::v1::Write)},
   { 11, -1, sizeof(::google::firestore::v1::DocumentTransform_FieldTransform)},
   { 24, -1, sizeof(::google::firestore::v1::DocumentTransform)},
@@ -366,101 +317,84 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::google::firestore::v1::_ExistenceFilter_default_instance_),
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  ::google::protobuf::MessageFactory* factory = NULL;
-  AssignDescriptors(
-      "google/firestore/v1/write.proto", schemas, file_default_instances, TableStruct::offsets, factory,
-      file_level_metadata, file_level_enum_descriptors, NULL);
-}
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_google_2ffirestore_2fv1_2fwrite_2eproto = {
+  {}, AddDescriptors_google_2ffirestore_2fv1_2fwrite_2eproto, "google/firestore/v1/write.proto", schemas,
+  file_default_instances, TableStruct_google_2ffirestore_2fv1_2fwrite_2eproto::offsets,
+  file_level_metadata_google_2ffirestore_2fv1_2fwrite_2eproto, 8, file_level_enum_descriptors_google_2ffirestore_2fv1_2fwrite_2eproto, file_level_service_descriptors_google_2ffirestore_2fv1_2fwrite_2eproto,
+};
 
-void protobuf_AssignDescriptorsOnce() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
-}
+const char descriptor_table_protodef_google_2ffirestore_2fv1_2fwrite_2eproto[] =
+  "\n\037google/firestore/v1/write.proto\022\023googl"
+  "e.firestore.v1\032\034google/api/annotations.p"
+  "roto\032 google/firestore/v1/common.proto\032\""
+  "google/firestore/v1/document.proto\032\037goog"
+  "le/protobuf/timestamp.proto\"\211\002\n\005Write\022/\n"
+  "\006update\030\001 \001(\0132\035.google.firestore.v1.Docu"
+  "mentH\000\022\020\n\006delete\030\002 \001(\tH\000\022;\n\ttransform\030\006 "
+  "\001(\0132&.google.firestore.v1.DocumentTransf"
+  "ormH\000\0226\n\013update_mask\030\003 \001(\0132!.google.fire"
+  "store.v1.DocumentMask\022;\n\020current_documen"
+  "t\030\004 \001(\0132!.google.firestore.v1.Preconditi"
+  "onB\013\n\toperation\"\345\004\n\021DocumentTransform\022\020\n"
+  "\010document\030\001 \001(\t\022O\n\020field_transforms\030\002 \003("
+  "\01325.google.firestore.v1.DocumentTransfor"
+  "m.FieldTransform\032\354\003\n\016FieldTransform\022\022\n\nf"
+  "ield_path\030\001 \001(\t\022`\n\023set_to_server_value\030\002"
+  " \001(\0162A.google.firestore.v1.DocumentTrans"
+  "form.FieldTransform.ServerValueH\000\022/\n\tinc"
+  "rement\030\003 \001(\0132\032.google.firestore.v1.Value"
+  "H\000\022-\n\007maximum\030\004 \001(\0132\032.google.firestore.v"
+  "1.ValueH\000\022-\n\007minimum\030\005 \001(\0132\032.google.fire"
+  "store.v1.ValueH\000\022B\n\027append_missing_eleme"
+  "nts\030\006 \001(\0132\037.google.firestore.v1.ArrayVal"
+  "ueH\000\022@\n\025remove_all_from_array\030\007 \001(\0132\037.go"
+  "ogle.firestore.v1.ArrayValueH\000\"=\n\013Server"
+  "Value\022\034\n\030SERVER_VALUE_UNSPECIFIED\020\000\022\020\n\014R"
+  "EQUEST_TIME\020\001B\020\n\016transform_type\"u\n\013Write"
+  "Result\022/\n\013update_time\030\001 \001(\0132\032.google.pro"
+  "tobuf.Timestamp\0225\n\021transform_results\030\002 \003"
+  "(\0132\032.google.firestore.v1.Value\"q\n\016Docume"
+  "ntChange\022/\n\010document\030\001 \001(\0132\035.google.fire"
+  "store.v1.Document\022\022\n\ntarget_ids\030\005 \003(\005\022\032\n"
+  "\022removed_target_ids\030\006 \003(\005\"m\n\016DocumentDel"
+  "ete\022\020\n\010document\030\001 \001(\t\022\032\n\022removed_target_"
+  "ids\030\006 \003(\005\022-\n\tread_time\030\004 \001(\0132\032.google.pr"
+  "otobuf.Timestamp\"m\n\016DocumentRemove\022\020\n\010do"
+  "cument\030\001 \001(\t\022\032\n\022removed_target_ids\030\002 \003(\005"
+  "\022-\n\tread_time\030\004 \001(\0132\032.google.protobuf.Ti"
+  "mestamp\"3\n\017ExistenceFilter\022\021\n\ttarget_id\030"
+  "\001 \001(\005\022\r\n\005count\030\002 \001(\005B\256\001\n\027com.google.fire"
+  "store.v1B\nWriteProtoP\001Z<google.golang.or"
+  "g/genproto/googleapis/firestore/v1;fires"
+  "tore\242\002\004GCFS\252\002\036Google.Cloud.Firestore.V1B"
+  "eta1\312\002\036Google\\Cloud\\Firestore\\V1beta1b\006p"
+  "roto3"
+  ;
+::google::protobuf::internal::DescriptorTable descriptor_table_google_2ffirestore_2fv1_2fwrite_2eproto = {
+  false, InitDefaults_google_2ffirestore_2fv1_2fwrite_2eproto, 
+  descriptor_table_protodef_google_2ffirestore_2fv1_2fwrite_2eproto,
+  "google/firestore/v1/write.proto", &assign_descriptors_table_google_2ffirestore_2fv1_2fwrite_2eproto, 1765,
+};
 
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 8);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\037google/firestore/v1/write.proto\022\023googl"
-      "e.firestore.v1\032\034google/api/annotations.p"
-      "roto\032 google/firestore/v1/common.proto\032\""
-      "google/firestore/v1/document.proto\032\037goog"
-      "le/protobuf/timestamp.proto\"\211\002\n\005Write\022/\n"
-      "\006update\030\001 \001(\0132\035.google.firestore.v1.Docu"
-      "mentH\000\022\020\n\006delete\030\002 \001(\tH\000\022;\n\ttransform\030\006 "
-      "\001(\0132&.google.firestore.v1.DocumentTransf"
-      "ormH\000\0226\n\013update_mask\030\003 \001(\0132!.google.fire"
-      "store.v1.DocumentMask\022;\n\020current_documen"
-      "t\030\004 \001(\0132!.google.firestore.v1.Preconditi"
-      "onB\013\n\toperation\"\345\004\n\021DocumentTransform\022\020\n"
-      "\010document\030\001 \001(\t\022O\n\020field_transforms\030\002 \003("
-      "\01325.google.firestore.v1.DocumentTransfor"
-      "m.FieldTransform\032\354\003\n\016FieldTransform\022\022\n\nf"
-      "ield_path\030\001 \001(\t\022`\n\023set_to_server_value\030\002"
-      " \001(\0162A.google.firestore.v1.DocumentTrans"
-      "form.FieldTransform.ServerValueH\000\022/\n\tinc"
-      "rement\030\003 \001(\0132\032.google.firestore.v1.Value"
-      "H\000\022-\n\007maximum\030\004 \001(\0132\032.google.firestore.v"
-      "1.ValueH\000\022-\n\007minimum\030\005 \001(\0132\032.google.fire"
-      "store.v1.ValueH\000\022B\n\027append_missing_eleme"
-      "nts\030\006 \001(\0132\037.google.firestore.v1.ArrayVal"
-      "ueH\000\022@\n\025remove_all_from_array\030\007 \001(\0132\037.go"
-      "ogle.firestore.v1.ArrayValueH\000\"=\n\013Server"
-      "Value\022\034\n\030SERVER_VALUE_UNSPECIFIED\020\000\022\020\n\014R"
-      "EQUEST_TIME\020\001B\020\n\016transform_type\"u\n\013Write"
-      "Result\022/\n\013update_time\030\001 \001(\0132\032.google.pro"
-      "tobuf.Timestamp\0225\n\021transform_results\030\002 \003"
-      "(\0132\032.google.firestore.v1.Value\"q\n\016Docume"
-      "ntChange\022/\n\010document\030\001 \001(\0132\035.google.fire"
-      "store.v1.Document\022\022\n\ntarget_ids\030\005 \003(\005\022\032\n"
-      "\022removed_target_ids\030\006 \003(\005\"m\n\016DocumentDel"
-      "ete\022\020\n\010document\030\001 \001(\t\022\032\n\022removed_target_"
-      "ids\030\006 \003(\005\022-\n\tread_time\030\004 \001(\0132\032.google.pr"
-      "otobuf.Timestamp\"m\n\016DocumentRemove\022\020\n\010do"
-      "cument\030\001 \001(\t\022\032\n\022removed_target_ids\030\002 \003(\005"
-      "\022-\n\tread_time\030\004 \001(\0132\032.google.protobuf.Ti"
-      "mestamp\"3\n\017ExistenceFilter\022\021\n\ttarget_id\030"
-      "\001 \001(\005\022\r\n\005count\030\002 \001(\005B\256\001\n\027com.google.fire"
-      "store.v1B\nWriteProtoP\001Z<google.golang.or"
-      "g/genproto/googleapis/firestore/v1;fires"
-      "tore\242\002\004GCFS\252\002\036Google.Cloud.Firestore.V1B"
-      "eta1\312\002\036Google\\Cloud\\Firestore\\V1beta1b\006p"
-      "roto3"
+void AddDescriptors_google_2ffirestore_2fv1_2fwrite_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[4] =
+  {
+    ::AddDescriptors_google_2fapi_2fannotations_2eproto,
+    ::AddDescriptors_google_2ffirestore_2fv1_2fcommon_2eproto,
+    ::AddDescriptors_google_2ffirestore_2fv1_2fdocument_2eproto,
+    ::AddDescriptors_google_2fprotobuf_2ftimestamp_2eproto,
   };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1765);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "google/firestore/v1/write.proto", &protobuf_RegisterTypes);
-  ::protobuf_google_2fapi_2fannotations_2eproto::AddDescriptors();
-  ::protobuf_google_2ffirestore_2fv1_2fcommon_2eproto::AddDescriptors();
-  ::protobuf_google_2ffirestore_2fv1_2fdocument_2eproto::AddDescriptors();
-  ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_google_2ffirestore_2fv1_2fwrite_2eproto, deps, 4);
 }
 
-void AddDescriptors() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_google_2ffirestore_2fv1_2fwrite_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+static bool dynamic_init_dummy_google_2ffirestore_2fv1_2fwrite_2eproto = []() { AddDescriptors_google_2ffirestore_2fv1_2fwrite_2eproto(); return true; }();
 namespace google {
 namespace firestore {
 namespace v1 {
 const ::google::protobuf::EnumDescriptor* DocumentTransform_FieldTransform_ServerValue_descriptor() {
-  protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_enum_descriptors[0];
+  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_google_2ffirestore_2fv1_2fwrite_2eproto);
+  return file_level_enum_descriptors_google_2ffirestore_2fv1_2fwrite_2eproto[0];
 }
 bool DocumentTransform_FieldTransform_ServerValue_IsValid(int value) {
   switch (value) {
@@ -494,11 +428,35 @@ void Write::InitAsDefaultInstance() {
   ::google::firestore::v1::_Write_default_instance_._instance.get_mutable()->current_document_ = const_cast< ::google::firestore::v1::Precondition*>(
       ::google::firestore::v1::Precondition::internal_default_instance());
 }
+class Write::HasBitSetters {
+ public:
+  static const ::google::firestore::v1::Document& update(const Write* msg);
+  static const ::google::firestore::v1::DocumentTransform& transform(const Write* msg);
+  static const ::google::firestore::v1::DocumentMask& update_mask(const Write* msg);
+  static const ::google::firestore::v1::Precondition& current_document(const Write* msg);
+};
+
+const ::google::firestore::v1::Document&
+Write::HasBitSetters::update(const Write* msg) {
+  return *msg->operation_.update_;
+}
+const ::google::firestore::v1::DocumentTransform&
+Write::HasBitSetters::transform(const Write* msg) {
+  return *msg->operation_.transform_;
+}
+const ::google::firestore::v1::DocumentMask&
+Write::HasBitSetters::update_mask(const Write* msg) {
+  return *msg->update_mask_;
+}
+const ::google::firestore::v1::Precondition&
+Write::HasBitSetters::current_document(const Write* msg) {
+  return *msg->current_document_;
+}
 void Write::set_allocated_update(::google::firestore::v1::Document* update) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   clear_operation();
   if (update) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
+    ::google::protobuf::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
       update = ::google::protobuf::internal::GetOwnedMessage(
           message_arena, update, submessage_arena);
@@ -518,7 +476,7 @@ void Write::set_allocated_transform(::google::firestore::v1::DocumentTransform* 
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   clear_operation();
   if (transform) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
+    ::google::protobuf::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
       transform = ::google::protobuf::internal::GetOwnedMessage(
           message_arena, transform, submessage_arena);
@@ -529,16 +487,16 @@ void Write::set_allocated_transform(::google::firestore::v1::DocumentTransform* 
   // @@protoc_insertion_point(field_set_allocated:google.firestore.v1.Write.transform)
 }
 void Write::clear_update_mask() {
-  if (GetArenaNoVirtual() == NULL && update_mask_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && update_mask_ != nullptr) {
     delete update_mask_;
   }
-  update_mask_ = NULL;
+  update_mask_ = nullptr;
 }
 void Write::clear_current_document() {
-  if (GetArenaNoVirtual() == NULL && current_document_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && current_document_ != nullptr) {
     delete current_document_;
   }
-  current_document_ = NULL;
+  current_document_ = nullptr;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Write::kUpdateFieldNumber;
@@ -549,27 +507,23 @@ const int Write::kCurrentDocumentFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Write::Write()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsWrite();
-  }
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:google.firestore.v1.Write)
 }
 Write::Write(const Write& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_update_mask()) {
     update_mask_ = new ::google::firestore::v1::DocumentMask(*from.update_mask_);
   } else {
-    update_mask_ = NULL;
+    update_mask_ = nullptr;
   }
   if (from.has_current_document()) {
     current_document_ = new ::google::firestore::v1::Precondition(*from.current_document_);
   } else {
-    current_document_ = NULL;
+    current_document_ = nullptr;
   }
   clear_has_operation();
   switch (from.operation_case()) {
@@ -593,11 +547,12 @@ Write::Write(const Write& from)
 }
 
 void Write::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_Write_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   ::memset(&update_mask_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&current_document_) -
       reinterpret_cast<char*>(&update_mask_)) + sizeof(current_document_));
   clear_has_operation();
-  _cached_size_ = 0;
 }
 
 Write::~Write() {
@@ -614,27 +569,13 @@ void Write::SharedDtor() {
 }
 
 void Write::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Write::descriptor() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Write& Write::default_instance() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsWrite();
+  ::google::protobuf::internal::InitSCC(&::scc_info_Write_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   return *internal_default_instance();
 }
 
-Write* Write::New(::google::protobuf::Arena* arena) const {
-  Write* n = new Write;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Write::clear_operation() {
 // @@protoc_insertion_point(one_of_clear_start:google.firestore.v1.Write)
@@ -665,32 +606,136 @@ void Write::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == NULL && update_mask_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && update_mask_ != nullptr) {
     delete update_mask_;
   }
-  update_mask_ = NULL;
-  if (GetArenaNoVirtual() == NULL && current_document_ != NULL) {
+  update_mask_ = nullptr;
+  if (GetArenaNoVirtual() == nullptr && current_document_ != nullptr) {
     delete current_document_;
   }
-  current_document_ = NULL;
+  current_document_ = nullptr;
   clear_operation();
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* Write::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<Write*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .google.firestore.v1.Document update = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::Document::_InternalParse;
+        object = msg->mutable_update();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // string delete = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("google.firestore.v1.Write.delete");
+        object = msg->mutable_delete_();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // .google.firestore.v1.DocumentMask update_mask = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::DocumentMask::_InternalParse;
+        object = msg->mutable_update_mask();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .google.firestore.v1.Precondition current_document = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::Precondition::_InternalParse;
+        object = msg->mutable_current_document();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .google.firestore.v1.DocumentTransform transform = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::DocumentTransform::_InternalParse;
+        object = msg->mutable_transform();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool Write::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:google.firestore.v1.Write)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .google.firestore.v1.Document update = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_update()));
         } else {
@@ -701,8 +746,7 @@ bool Write::MergePartialFromCodedStream(
 
       // string delete = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_delete_()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -717,8 +761,7 @@ bool Write::MergePartialFromCodedStream(
 
       // .google.firestore.v1.DocumentMask update_mask = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_update_mask()));
         } else {
@@ -729,8 +772,7 @@ bool Write::MergePartialFromCodedStream(
 
       // .google.firestore.v1.Precondition current_document = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_current_document()));
         } else {
@@ -741,8 +783,7 @@ bool Write::MergePartialFromCodedStream(
 
       // .google.firestore.v1.DocumentTransform transform = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_transform()));
         } else {
@@ -770,6 +811,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void Write::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -780,7 +822,7 @@ void Write::SerializeWithCachedSizes(
   // .google.firestore.v1.Document update = 1;
   if (has_update()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *operation_.update_, output);
+      1, HasBitSetters::update(this), output);
   }
 
   // string delete = 2;
@@ -796,31 +838,30 @@ void Write::SerializeWithCachedSizes(
   // .google.firestore.v1.DocumentMask update_mask = 3;
   if (this->has_update_mask()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *this->update_mask_, output);
+      3, HasBitSetters::update_mask(this), output);
   }
 
   // .google.firestore.v1.Precondition current_document = 4;
   if (this->has_current_document()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, *this->current_document_, output);
+      4, HasBitSetters::current_document(this), output);
   }
 
   // .google.firestore.v1.DocumentTransform transform = 6;
   if (has_transform()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, *operation_.transform_, output);
+      6, HasBitSetters::transform(this), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:google.firestore.v1.Write)
 }
 
 ::google::protobuf::uint8* Write::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:google.firestore.v1.Write)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -829,7 +870,7 @@ void Write::SerializeWithCachedSizes(
   if (has_update()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *operation_.update_, deterministic, target);
+        1, HasBitSetters::update(this), target);
   }
 
   // string delete = 2;
@@ -847,26 +888,26 @@ void Write::SerializeWithCachedSizes(
   if (this->has_update_mask()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, *this->update_mask_, deterministic, target);
+        3, HasBitSetters::update_mask(this), target);
   }
 
   // .google.firestore.v1.Precondition current_document = 4;
   if (this->has_current_document()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        4, *this->current_document_, deterministic, target);
+        4, HasBitSetters::current_document(this), target);
   }
 
   // .google.firestore.v1.DocumentTransform transform = 6;
   if (has_transform()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        6, *operation_.transform_, deterministic, target);
+        6, HasBitSetters::transform(this), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:google.firestore.v1.Write)
   return target;
@@ -876,23 +917,27 @@ size_t Write::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:google.firestore.v1.Write)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // .google.firestore.v1.DocumentMask update_mask = 3;
   if (this->has_update_mask()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->update_mask_);
+        *update_mask_);
   }
 
   // .google.firestore.v1.Precondition current_document = 4;
   if (this->has_current_document()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->current_document_);
+        *current_document_);
   }
 
   switch (operation_case()) {
@@ -922,9 +967,7 @@ size_t Write::ByteSizeLong() const {
     }
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -932,9 +975,9 @@ void Write::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:google.firestore.v1.Write)
   GOOGLE_DCHECK_NE(&from, this);
   const Write* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Write>(
+      ::google::protobuf::DynamicCastToGenerated<Write>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:google.firestore.v1.Write)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -999,17 +1042,16 @@ void Write::Swap(Write* other) {
 }
 void Write::InternalSwap(Write* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(update_mask_, other->update_mask_);
   swap(current_document_, other->current_document_);
   swap(operation_, other->operation_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Write::GetMetadata() const {
-  protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_google_2ffirestore_2fv1_2fwrite_2eproto);
+  return ::file_level_metadata_google_2ffirestore_2fv1_2fwrite_2eproto[kIndexInFileMessages];
 }
 
 
@@ -1028,11 +1070,40 @@ void DocumentTransform_FieldTransform::InitAsDefaultInstance() {
   ::google::firestore::v1::_DocumentTransform_FieldTransform_default_instance_.remove_all_from_array_ = const_cast< ::google::firestore::v1::ArrayValue*>(
       ::google::firestore::v1::ArrayValue::internal_default_instance());
 }
+class DocumentTransform_FieldTransform::HasBitSetters {
+ public:
+  static const ::google::firestore::v1::Value& increment(const DocumentTransform_FieldTransform* msg);
+  static const ::google::firestore::v1::Value& maximum(const DocumentTransform_FieldTransform* msg);
+  static const ::google::firestore::v1::Value& minimum(const DocumentTransform_FieldTransform* msg);
+  static const ::google::firestore::v1::ArrayValue& append_missing_elements(const DocumentTransform_FieldTransform* msg);
+  static const ::google::firestore::v1::ArrayValue& remove_all_from_array(const DocumentTransform_FieldTransform* msg);
+};
+
+const ::google::firestore::v1::Value&
+DocumentTransform_FieldTransform::HasBitSetters::increment(const DocumentTransform_FieldTransform* msg) {
+  return *msg->transform_type_.increment_;
+}
+const ::google::firestore::v1::Value&
+DocumentTransform_FieldTransform::HasBitSetters::maximum(const DocumentTransform_FieldTransform* msg) {
+  return *msg->transform_type_.maximum_;
+}
+const ::google::firestore::v1::Value&
+DocumentTransform_FieldTransform::HasBitSetters::minimum(const DocumentTransform_FieldTransform* msg) {
+  return *msg->transform_type_.minimum_;
+}
+const ::google::firestore::v1::ArrayValue&
+DocumentTransform_FieldTransform::HasBitSetters::append_missing_elements(const DocumentTransform_FieldTransform* msg) {
+  return *msg->transform_type_.append_missing_elements_;
+}
+const ::google::firestore::v1::ArrayValue&
+DocumentTransform_FieldTransform::HasBitSetters::remove_all_from_array(const DocumentTransform_FieldTransform* msg) {
+  return *msg->transform_type_.remove_all_from_array_;
+}
 void DocumentTransform_FieldTransform::set_allocated_increment(::google::firestore::v1::Value* increment) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   clear_transform_type();
   if (increment) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
+    ::google::protobuf::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
       increment = ::google::protobuf::internal::GetOwnedMessage(
           message_arena, increment, submessage_arena);
@@ -1052,7 +1123,7 @@ void DocumentTransform_FieldTransform::set_allocated_maximum(::google::firestore
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   clear_transform_type();
   if (maximum) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
+    ::google::protobuf::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
       maximum = ::google::protobuf::internal::GetOwnedMessage(
           message_arena, maximum, submessage_arena);
@@ -1072,7 +1143,7 @@ void DocumentTransform_FieldTransform::set_allocated_minimum(::google::firestore
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   clear_transform_type();
   if (minimum) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
+    ::google::protobuf::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
       minimum = ::google::protobuf::internal::GetOwnedMessage(
           message_arena, minimum, submessage_arena);
@@ -1092,7 +1163,7 @@ void DocumentTransform_FieldTransform::set_allocated_append_missing_elements(::g
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   clear_transform_type();
   if (append_missing_elements) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
+    ::google::protobuf::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
       append_missing_elements = ::google::protobuf::internal::GetOwnedMessage(
           message_arena, append_missing_elements, submessage_arena);
@@ -1112,7 +1183,7 @@ void DocumentTransform_FieldTransform::set_allocated_remove_all_from_array(::goo
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   clear_transform_type();
   if (remove_all_from_array) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
+    ::google::protobuf::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
       remove_all_from_array = ::google::protobuf::internal::GetOwnedMessage(
           message_arena, remove_all_from_array, submessage_arena);
@@ -1139,17 +1210,13 @@ const int DocumentTransform_FieldTransform::kRemoveAllFromArrayFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 DocumentTransform_FieldTransform::DocumentTransform_FieldTransform()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentTransform_FieldTransform();
-  }
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:google.firestore.v1.DocumentTransform.FieldTransform)
 }
 DocumentTransform_FieldTransform::DocumentTransform_FieldTransform(const DocumentTransform_FieldTransform& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   field_path_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.field_path().size() > 0) {
@@ -1189,9 +1256,10 @@ DocumentTransform_FieldTransform::DocumentTransform_FieldTransform(const Documen
 }
 
 void DocumentTransform_FieldTransform::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_DocumentTransform_FieldTransform_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   field_path_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   clear_has_transform_type();
-  _cached_size_ = 0;
 }
 
 DocumentTransform_FieldTransform::~DocumentTransform_FieldTransform() {
@@ -1207,27 +1275,13 @@ void DocumentTransform_FieldTransform::SharedDtor() {
 }
 
 void DocumentTransform_FieldTransform::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* DocumentTransform_FieldTransform::descriptor() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const DocumentTransform_FieldTransform& DocumentTransform_FieldTransform::default_instance() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentTransform_FieldTransform();
+  ::google::protobuf::internal::InitSCC(&::scc_info_DocumentTransform_FieldTransform_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   return *internal_default_instance();
 }
 
-DocumentTransform_FieldTransform* DocumentTransform_FieldTransform::New(::google::protobuf::Arena* arena) const {
-  DocumentTransform_FieldTransform* n = new DocumentTransform_FieldTransform;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void DocumentTransform_FieldTransform::clear_transform_type() {
 // @@protoc_insertion_point(one_of_clear_start:google.firestore.v1.DocumentTransform.FieldTransform)
@@ -1275,20 +1329,145 @@ void DocumentTransform_FieldTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* DocumentTransform_FieldTransform::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<DocumentTransform_FieldTransform*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // string field_path = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("google.firestore.v1.DocumentTransform.FieldTransform.field_path");
+        object = msg->mutable_field_path();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // .google.firestore.v1.DocumentTransform.FieldTransform.ServerValue set_to_server_value = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
+        msg->set_set_to_server_value(static_cast<::google::firestore::v1::DocumentTransform_FieldTransform_ServerValue>(val));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // .google.firestore.v1.Value increment = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::Value::_InternalParse;
+        object = msg->mutable_increment();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .google.firestore.v1.Value maximum = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::Value::_InternalParse;
+        object = msg->mutable_maximum();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .google.firestore.v1.Value minimum = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::Value::_InternalParse;
+        object = msg->mutable_minimum();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .google.firestore.v1.ArrayValue append_missing_elements = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::ArrayValue::_InternalParse;
+        object = msg->mutable_append_missing_elements();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .google.firestore.v1.ArrayValue remove_all_from_array = 7;
+      case 7: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::ArrayValue::_InternalParse;
+        object = msg->mutable_remove_all_from_array();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool DocumentTransform_FieldTransform::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:google.firestore.v1.DocumentTransform.FieldTransform)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string field_path = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_field_path()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1303,9 +1482,8 @@ bool DocumentTransform_FieldTransform::MergePartialFromCodedStream(
 
       // .google.firestore.v1.DocumentTransform.FieldTransform.ServerValue set_to_server_value = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          int value;
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
+          int value = 0;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
                  input, &value)));
@@ -1318,8 +1496,7 @@ bool DocumentTransform_FieldTransform::MergePartialFromCodedStream(
 
       // .google.firestore.v1.Value increment = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_increment()));
         } else {
@@ -1330,8 +1507,7 @@ bool DocumentTransform_FieldTransform::MergePartialFromCodedStream(
 
       // .google.firestore.v1.Value maximum = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_maximum()));
         } else {
@@ -1342,8 +1518,7 @@ bool DocumentTransform_FieldTransform::MergePartialFromCodedStream(
 
       // .google.firestore.v1.Value minimum = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_minimum()));
         } else {
@@ -1354,8 +1529,7 @@ bool DocumentTransform_FieldTransform::MergePartialFromCodedStream(
 
       // .google.firestore.v1.ArrayValue append_missing_elements = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_append_missing_elements()));
         } else {
@@ -1366,8 +1540,7 @@ bool DocumentTransform_FieldTransform::MergePartialFromCodedStream(
 
       // .google.firestore.v1.ArrayValue remove_all_from_array = 7;
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(58u /* 58 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_remove_all_from_array()));
         } else {
@@ -1395,6 +1568,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void DocumentTransform_FieldTransform::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -1421,43 +1595,42 @@ void DocumentTransform_FieldTransform::SerializeWithCachedSizes(
   // .google.firestore.v1.Value increment = 3;
   if (has_increment()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *transform_type_.increment_, output);
+      3, HasBitSetters::increment(this), output);
   }
 
   // .google.firestore.v1.Value maximum = 4;
   if (has_maximum()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, *transform_type_.maximum_, output);
+      4, HasBitSetters::maximum(this), output);
   }
 
   // .google.firestore.v1.Value minimum = 5;
   if (has_minimum()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, *transform_type_.minimum_, output);
+      5, HasBitSetters::minimum(this), output);
   }
 
   // .google.firestore.v1.ArrayValue append_missing_elements = 6;
   if (has_append_missing_elements()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, *transform_type_.append_missing_elements_, output);
+      6, HasBitSetters::append_missing_elements(this), output);
   }
 
   // .google.firestore.v1.ArrayValue remove_all_from_array = 7;
   if (has_remove_all_from_array()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, *transform_type_.remove_all_from_array_, output);
+      7, HasBitSetters::remove_all_from_array(this), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:google.firestore.v1.DocumentTransform.FieldTransform)
 }
 
 ::google::protobuf::uint8* DocumentTransform_FieldTransform::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:google.firestore.v1.DocumentTransform.FieldTransform)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1483,40 +1656,40 @@ void DocumentTransform_FieldTransform::SerializeWithCachedSizes(
   if (has_increment()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, *transform_type_.increment_, deterministic, target);
+        3, HasBitSetters::increment(this), target);
   }
 
   // .google.firestore.v1.Value maximum = 4;
   if (has_maximum()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        4, *transform_type_.maximum_, deterministic, target);
+        4, HasBitSetters::maximum(this), target);
   }
 
   // .google.firestore.v1.Value minimum = 5;
   if (has_minimum()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        5, *transform_type_.minimum_, deterministic, target);
+        5, HasBitSetters::minimum(this), target);
   }
 
   // .google.firestore.v1.ArrayValue append_missing_elements = 6;
   if (has_append_missing_elements()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        6, *transform_type_.append_missing_elements_, deterministic, target);
+        6, HasBitSetters::append_missing_elements(this), target);
   }
 
   // .google.firestore.v1.ArrayValue remove_all_from_array = 7;
   if (has_remove_all_from_array()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        7, *transform_type_.remove_all_from_array_, deterministic, target);
+        7, HasBitSetters::remove_all_from_array(this), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:google.firestore.v1.DocumentTransform.FieldTransform)
   return target;
@@ -1526,11 +1699,15 @@ size_t DocumentTransform_FieldTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:google.firestore.v1.DocumentTransform.FieldTransform)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // string field_path = 1;
   if (this->field_path().size() > 0) {
     total_size += 1 +
@@ -1585,9 +1762,7 @@ size_t DocumentTransform_FieldTransform::ByteSizeLong() const {
     }
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -1595,9 +1770,9 @@ void DocumentTransform_FieldTransform::MergeFrom(const ::google::protobuf::Messa
 // @@protoc_insertion_point(generalized_merge_from_start:google.firestore.v1.DocumentTransform.FieldTransform)
   GOOGLE_DCHECK_NE(&from, this);
   const DocumentTransform_FieldTransform* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const DocumentTransform_FieldTransform>(
+      ::google::protobuf::DynamicCastToGenerated<DocumentTransform_FieldTransform>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:google.firestore.v1.DocumentTransform.FieldTransform)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1672,16 +1847,16 @@ void DocumentTransform_FieldTransform::Swap(DocumentTransform_FieldTransform* ot
 }
 void DocumentTransform_FieldTransform::InternalSwap(DocumentTransform_FieldTransform* other) {
   using std::swap;
-  field_path_.Swap(&other->field_path_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  field_path_.Swap(&other->field_path_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(transform_type_, other->transform_type_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata DocumentTransform_FieldTransform::GetMetadata() const {
-  protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_google_2ffirestore_2fv1_2fwrite_2eproto);
+  return ::file_level_metadata_google_2ffirestore_2fv1_2fwrite_2eproto[kIndexInFileMessages];
 }
 
 
@@ -1689,24 +1864,24 @@ void DocumentTransform_FieldTransform::InternalSwap(DocumentTransform_FieldTrans
 
 void DocumentTransform::InitAsDefaultInstance() {
 }
+class DocumentTransform::HasBitSetters {
+ public:
+};
+
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int DocumentTransform::kDocumentFieldNumber;
 const int DocumentTransform::kFieldTransformsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 DocumentTransform::DocumentTransform()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentTransform();
-  }
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:google.firestore.v1.DocumentTransform)
 }
 DocumentTransform::DocumentTransform(const DocumentTransform& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      field_transforms_(from.field_transforms_),
-      _cached_size_(0) {
+      _internal_metadata_(nullptr),
+      field_transforms_(from.field_transforms_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   document_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.document().size() > 0) {
@@ -1716,8 +1891,9 @@ DocumentTransform::DocumentTransform(const DocumentTransform& from)
 }
 
 void DocumentTransform::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_DocumentTransform_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   document_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  _cached_size_ = 0;
 }
 
 DocumentTransform::~DocumentTransform() {
@@ -1730,27 +1906,13 @@ void DocumentTransform::SharedDtor() {
 }
 
 void DocumentTransform::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* DocumentTransform::descriptor() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const DocumentTransform& DocumentTransform::default_instance() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentTransform();
+  ::google::protobuf::internal::InitSCC(&::scc_info_DocumentTransform_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   return *internal_default_instance();
 }
 
-DocumentTransform* DocumentTransform::New(::google::protobuf::Arena* arena) const {
-  DocumentTransform* n = new DocumentTransform;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void DocumentTransform::Clear() {
 // @@protoc_insertion_point(message_clear_start:google.firestore.v1.DocumentTransform)
@@ -1763,20 +1925,88 @@ void DocumentTransform::Clear() {
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* DocumentTransform::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<DocumentTransform*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // string document = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("google.firestore.v1.DocumentTransform.document");
+        object = msg->mutable_document();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // repeated .google.firestore.v1.DocumentTransform.FieldTransform field_transforms = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::google::firestore::v1::DocumentTransform_FieldTransform::_InternalParse;
+          object = msg->add_field_transforms();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 18 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool DocumentTransform::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:google.firestore.v1.DocumentTransform)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string document = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_document()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -1791,9 +2021,9 @@ bool DocumentTransform::MergePartialFromCodedStream(
 
       // repeated .google.firestore.v1.DocumentTransform.FieldTransform field_transforms = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_field_transforms()));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_field_transforms()));
         } else {
           goto handle_unusual;
         }
@@ -1819,6 +2049,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void DocumentTransform::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -1840,19 +2071,20 @@ void DocumentTransform::SerializeWithCachedSizes(
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->field_transforms_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->field_transforms(static_cast<int>(i)), output);
+      2,
+      this->field_transforms(static_cast<int>(i)),
+      output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:google.firestore.v1.DocumentTransform)
 }
 
 ::google::protobuf::uint8* DocumentTransform::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:google.firestore.v1.DocumentTransform)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1873,12 +2105,12 @@ void DocumentTransform::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->field_transforms_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, this->field_transforms(static_cast<int>(i)), deterministic, target);
+        2, this->field_transforms(static_cast<int>(i)), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:google.firestore.v1.DocumentTransform)
   return target;
@@ -1888,11 +2120,15 @@ size_t DocumentTransform::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:google.firestore.v1.DocumentTransform)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .google.firestore.v1.DocumentTransform.FieldTransform field_transforms = 2;
   {
     unsigned int count = static_cast<unsigned int>(this->field_transforms_size());
@@ -1912,9 +2148,7 @@ size_t DocumentTransform::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -1922,9 +2156,9 @@ void DocumentTransform::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:google.firestore.v1.DocumentTransform)
   GOOGLE_DCHECK_NE(&from, this);
   const DocumentTransform* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const DocumentTransform>(
+      ::google::protobuf::DynamicCastToGenerated<DocumentTransform>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:google.firestore.v1.DocumentTransform)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1971,15 +2205,15 @@ void DocumentTransform::Swap(DocumentTransform* other) {
 }
 void DocumentTransform::InternalSwap(DocumentTransform* other) {
   using std::swap;
-  field_transforms_.InternalSwap(&other->field_transforms_);
-  document_.Swap(&other->document_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
+  CastToBase(&field_transforms_)->InternalSwap(CastToBase(&other->field_transforms_));
+  document_.Swap(&other->document_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
 }
 
 ::google::protobuf::Metadata DocumentTransform::GetMetadata() const {
-  protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_google_2ffirestore_2fv1_2fwrite_2eproto);
+  return ::file_level_metadata_google_2ffirestore_2fv1_2fwrite_2eproto[kIndexInFileMessages];
 }
 
 
@@ -1989,11 +2223,20 @@ void WriteResult::InitAsDefaultInstance() {
   ::google::firestore::v1::_WriteResult_default_instance_._instance.get_mutable()->update_time_ = const_cast< ::google::protobuf::Timestamp*>(
       ::google::protobuf::Timestamp::internal_default_instance());
 }
+class WriteResult::HasBitSetters {
+ public:
+  static const ::google::protobuf::Timestamp& update_time(const WriteResult* msg);
+};
+
+const ::google::protobuf::Timestamp&
+WriteResult::HasBitSetters::update_time(const WriteResult* msg) {
+  return *msg->update_time_;
+}
 void WriteResult::clear_update_time() {
-  if (GetArenaNoVirtual() == NULL && update_time_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && update_time_ != nullptr) {
     delete update_time_;
   }
-  update_time_ = NULL;
+  update_time_ = nullptr;
 }
 void WriteResult::clear_transform_results() {
   transform_results_.Clear();
@@ -2004,30 +2247,27 @@ const int WriteResult::kTransformResultsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 WriteResult::WriteResult()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsWriteResult();
-  }
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:google.firestore.v1.WriteResult)
 }
 WriteResult::WriteResult(const WriteResult& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      transform_results_(from.transform_results_),
-      _cached_size_(0) {
+      _internal_metadata_(nullptr),
+      transform_results_(from.transform_results_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_update_time()) {
     update_time_ = new ::google::protobuf::Timestamp(*from.update_time_);
   } else {
-    update_time_ = NULL;
+    update_time_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:google.firestore.v1.WriteResult)
 }
 
 void WriteResult::SharedCtor() {
-  update_time_ = NULL;
-  _cached_size_ = 0;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_WriteResult_google_2ffirestore_2fv1_2fwrite_2eproto.base);
+  update_time_ = nullptr;
 }
 
 WriteResult::~WriteResult() {
@@ -2040,27 +2280,13 @@ void WriteResult::SharedDtor() {
 }
 
 void WriteResult::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* WriteResult::descriptor() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const WriteResult& WriteResult::default_instance() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsWriteResult();
+  ::google::protobuf::internal::InitSCC(&::scc_info_WriteResult_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   return *internal_default_instance();
 }
 
-WriteResult* WriteResult::New(::google::protobuf::Arena* arena) const {
-  WriteResult* n = new WriteResult;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void WriteResult::Clear() {
 // @@protoc_insertion_point(message_clear_start:google.firestore.v1.WriteResult)
@@ -2069,27 +2295,88 @@ void WriteResult::Clear() {
   (void) cached_has_bits;
 
   transform_results_.Clear();
-  if (GetArenaNoVirtual() == NULL && update_time_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && update_time_ != nullptr) {
     delete update_time_;
   }
-  update_time_ = NULL;
+  update_time_ = nullptr;
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* WriteResult::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<WriteResult*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .google.protobuf.Timestamp update_time = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::Timestamp::_InternalParse;
+        object = msg->mutable_update_time();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // repeated .google.firestore.v1.Value transform_results = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        do {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::google::firestore::v1::Value::_InternalParse;
+          object = msg->add_transform_results();
+          if (size > end - ptr) goto len_delim_till_end;
+          ptr += size;
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+              {parser_till_end, object}, ptr - size, ptr));
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 18 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool WriteResult::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:google.firestore.v1.WriteResult)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .google.protobuf.Timestamp update_time = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_update_time()));
         } else {
@@ -2100,9 +2387,9 @@ bool WriteResult::MergePartialFromCodedStream(
 
       // repeated .google.firestore.v1.Value transform_results = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(input, add_transform_results()));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_transform_results()));
         } else {
           goto handle_unusual;
         }
@@ -2128,6 +2415,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void WriteResult::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -2138,26 +2426,27 @@ void WriteResult::SerializeWithCachedSizes(
   // .google.protobuf.Timestamp update_time = 1;
   if (this->has_update_time()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->update_time_, output);
+      1, HasBitSetters::update_time(this), output);
   }
 
   // repeated .google.firestore.v1.Value transform_results = 2;
   for (unsigned int i = 0,
       n = static_cast<unsigned int>(this->transform_results_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->transform_results(static_cast<int>(i)), output);
+      2,
+      this->transform_results(static_cast<int>(i)),
+      output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:google.firestore.v1.WriteResult)
 }
 
 ::google::protobuf::uint8* WriteResult::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:google.firestore.v1.WriteResult)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2166,7 +2455,7 @@ void WriteResult::SerializeWithCachedSizes(
   if (this->has_update_time()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->update_time_, deterministic, target);
+        1, HasBitSetters::update_time(this), target);
   }
 
   // repeated .google.firestore.v1.Value transform_results = 2;
@@ -2174,12 +2463,12 @@ void WriteResult::SerializeWithCachedSizes(
       n = static_cast<unsigned int>(this->transform_results_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, this->transform_results(static_cast<int>(i)), deterministic, target);
+        2, this->transform_results(static_cast<int>(i)), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:google.firestore.v1.WriteResult)
   return target;
@@ -2189,11 +2478,15 @@ size_t WriteResult::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:google.firestore.v1.WriteResult)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated .google.firestore.v1.Value transform_results = 2;
   {
     unsigned int count = static_cast<unsigned int>(this->transform_results_size());
@@ -2209,13 +2502,11 @@ size_t WriteResult::ByteSizeLong() const {
   if (this->has_update_time()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->update_time_);
+        *update_time_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -2223,9 +2514,9 @@ void WriteResult::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:google.firestore.v1.WriteResult)
   GOOGLE_DCHECK_NE(&from, this);
   const WriteResult* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const WriteResult>(
+      ::google::protobuf::DynamicCastToGenerated<WriteResult>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:google.firestore.v1.WriteResult)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -2271,15 +2562,14 @@ void WriteResult::Swap(WriteResult* other) {
 }
 void WriteResult::InternalSwap(WriteResult* other) {
   using std::swap;
-  transform_results_.InternalSwap(&other->transform_results_);
-  swap(update_time_, other->update_time_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
+  CastToBase(&transform_results_)->InternalSwap(CastToBase(&other->transform_results_));
+  swap(update_time_, other->update_time_);
 }
 
 ::google::protobuf::Metadata WriteResult::GetMetadata() const {
-  protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_google_2ffirestore_2fv1_2fwrite_2eproto);
+  return ::file_level_metadata_google_2ffirestore_2fv1_2fwrite_2eproto[kIndexInFileMessages];
 }
 
 
@@ -2289,11 +2579,20 @@ void DocumentChange::InitAsDefaultInstance() {
   ::google::firestore::v1::_DocumentChange_default_instance_._instance.get_mutable()->document_ = const_cast< ::google::firestore::v1::Document*>(
       ::google::firestore::v1::Document::internal_default_instance());
 }
+class DocumentChange::HasBitSetters {
+ public:
+  static const ::google::firestore::v1::Document& document(const DocumentChange* msg);
+};
+
+const ::google::firestore::v1::Document&
+DocumentChange::HasBitSetters::document(const DocumentChange* msg) {
+  return *msg->document_;
+}
 void DocumentChange::clear_document() {
-  if (GetArenaNoVirtual() == NULL && document_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && document_ != nullptr) {
     delete document_;
   }
-  document_ = NULL;
+  document_ = nullptr;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int DocumentChange::kDocumentFieldNumber;
@@ -2302,31 +2601,28 @@ const int DocumentChange::kRemovedTargetIdsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 DocumentChange::DocumentChange()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentChange();
-  }
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:google.firestore.v1.DocumentChange)
 }
 DocumentChange::DocumentChange(const DocumentChange& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
+      _internal_metadata_(nullptr),
       target_ids_(from.target_ids_),
-      removed_target_ids_(from.removed_target_ids_),
-      _cached_size_(0) {
+      removed_target_ids_(from.removed_target_ids_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_document()) {
     document_ = new ::google::firestore::v1::Document(*from.document_);
   } else {
-    document_ = NULL;
+    document_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:google.firestore.v1.DocumentChange)
 }
 
 void DocumentChange::SharedCtor() {
-  document_ = NULL;
-  _cached_size_ = 0;
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_DocumentChange_google_2ffirestore_2fv1_2fwrite_2eproto.base);
+  document_ = nullptr;
 }
 
 DocumentChange::~DocumentChange() {
@@ -2339,27 +2635,13 @@ void DocumentChange::SharedDtor() {
 }
 
 void DocumentChange::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* DocumentChange::descriptor() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const DocumentChange& DocumentChange::default_instance() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentChange();
+  ::google::protobuf::internal::InitSCC(&::scc_info_DocumentChange_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   return *internal_default_instance();
 }
 
-DocumentChange* DocumentChange::New(::google::protobuf::Arena* arena) const {
-  DocumentChange* n = new DocumentChange;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void DocumentChange::Clear() {
 // @@protoc_insertion_point(message_clear_start:google.firestore.v1.DocumentChange)
@@ -2369,27 +2651,112 @@ void DocumentChange::Clear() {
 
   target_ids_.Clear();
   removed_target_ids_.Clear();
-  if (GetArenaNoVirtual() == NULL && document_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && document_ != nullptr) {
     delete document_;
   }
-  document_ = NULL;
+  document_ = nullptr;
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* DocumentChange::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<DocumentChange*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // .google.firestore.v1.Document document = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::Document::_InternalParse;
+        object = msg->mutable_document();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // repeated int32 target_ids = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) == 42) {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::google::protobuf::internal::PackedInt32Parser;
+          object = msg->mutable_target_ids();
+          if (size > end - ptr) goto len_delim_till_end;
+          auto newend = ptr + size;
+          if (size) ptr = parser_till_end(ptr, newend, object, ctx);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr == newend);
+          break;
+        } else if (static_cast<::google::protobuf::uint8>(tag) != 40) goto handle_unusual;
+        do {
+          msg->add_target_ids(::google::protobuf::internal::ReadVarint(&ptr));
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 40 && (ptr += 1));
+        break;
+      }
+      // repeated int32 removed_target_ids = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) == 50) {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::google::protobuf::internal::PackedInt32Parser;
+          object = msg->mutable_removed_target_ids();
+          if (size > end - ptr) goto len_delim_till_end;
+          auto newend = ptr + size;
+          if (size) ptr = parser_till_end(ptr, newend, object, ctx);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr == newend);
+          break;
+        } else if (static_cast<::google::protobuf::uint8>(tag) != 48) goto handle_unusual;
+        do {
+          msg->add_removed_target_ids(::google::protobuf::internal::ReadVarint(&ptr));
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 48 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool DocumentChange::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:google.firestore.v1.DocumentChange)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .google.firestore.v1.Document document = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_document()));
         } else {
@@ -2400,14 +2767,11 @@ bool DocumentChange::MergePartialFromCodedStream(
 
       // repeated int32 target_ids = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, this->mutable_target_ids())));
-        } else if (
-            static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
+        } else if (static_cast< ::google::protobuf::uint8>(tag) == (40 & 0xFF)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  1, 42u, input, this->mutable_target_ids())));
@@ -2419,14 +2783,11 @@ bool DocumentChange::MergePartialFromCodedStream(
 
       // repeated int32 removed_target_ids = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, this->mutable_removed_target_ids())));
-        } else if (
-            static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(48u /* 48 & 0xFF */)) {
+        } else if (static_cast< ::google::protobuf::uint8>(tag) == (48 & 0xFF)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  1, 50u, input, this->mutable_removed_target_ids())));
@@ -2455,6 +2816,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void DocumentChange::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -2465,14 +2827,14 @@ void DocumentChange::SerializeWithCachedSizes(
   // .google.firestore.v1.Document document = 1;
   if (this->has_document()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->document_, output);
+      1, HasBitSetters::document(this), output);
   }
 
   // repeated int32 target_ids = 5;
   if (this->target_ids_size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteTag(5, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
-        _target_ids_cached_byte_size_));
+    output->WriteVarint32(_target_ids_cached_byte_size_.load(
+        std::memory_order_relaxed));
   }
   for (int i = 0, n = this->target_ids_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32NoTag(
@@ -2482,24 +2844,23 @@ void DocumentChange::SerializeWithCachedSizes(
   // repeated int32 removed_target_ids = 6;
   if (this->removed_target_ids_size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteTag(6, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
-        _removed_target_ids_cached_byte_size_));
+    output->WriteVarint32(_removed_target_ids_cached_byte_size_.load(
+        std::memory_order_relaxed));
   }
   for (int i = 0, n = this->removed_target_ids_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32NoTag(
       this->removed_target_ids(i), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:google.firestore.v1.DocumentChange)
 }
 
 ::google::protobuf::uint8* DocumentChange::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:google.firestore.v1.DocumentChange)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2508,7 +2869,7 @@ void DocumentChange::SerializeWithCachedSizes(
   if (this->has_document()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->document_, deterministic, target);
+        1, HasBitSetters::document(this), target);
   }
 
   // repeated int32 target_ids = 5;
@@ -2518,8 +2879,8 @@ void DocumentChange::SerializeWithCachedSizes(
       ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
       target);
     target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        static_cast< ::google::protobuf::int32>(
-            _target_ids_cached_byte_size_), target);
+        _target_ids_cached_byte_size_.load(std::memory_order_relaxed),
+         target);
     target = ::google::protobuf::internal::WireFormatLite::
       WriteInt32NoTagToArray(this->target_ids_, target);
   }
@@ -2531,15 +2892,15 @@ void DocumentChange::SerializeWithCachedSizes(
       ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
       target);
     target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        static_cast< ::google::protobuf::int32>(
-            _removed_target_ids_cached_byte_size_), target);
+        _removed_target_ids_cached_byte_size_.load(std::memory_order_relaxed),
+         target);
     target = ::google::protobuf::internal::WireFormatLite::
       WriteInt32NoTagToArray(this->removed_target_ids_, target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:google.firestore.v1.DocumentChange)
   return target;
@@ -2549,11 +2910,15 @@ size_t DocumentChange::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:google.firestore.v1.DocumentChange)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated int32 target_ids = 5;
   {
     size_t data_size = ::google::protobuf::internal::WireFormatLite::
@@ -2561,12 +2926,11 @@ size_t DocumentChange::ByteSizeLong() const {
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast< ::google::protobuf::int32>(data_size));
+            static_cast<::google::protobuf::int32>(data_size));
     }
     int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _target_ids_cached_byte_size_ = cached_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+    _target_ids_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
@@ -2577,12 +2941,11 @@ size_t DocumentChange::ByteSizeLong() const {
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast< ::google::protobuf::int32>(data_size));
+            static_cast<::google::protobuf::int32>(data_size));
     }
     int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _removed_target_ids_cached_byte_size_ = cached_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+    _removed_target_ids_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
@@ -2590,13 +2953,11 @@ size_t DocumentChange::ByteSizeLong() const {
   if (this->has_document()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->document_);
+        *document_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -2604,9 +2965,9 @@ void DocumentChange::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:google.firestore.v1.DocumentChange)
   GOOGLE_DCHECK_NE(&from, this);
   const DocumentChange* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const DocumentChange>(
+      ::google::protobuf::DynamicCastToGenerated<DocumentChange>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:google.firestore.v1.DocumentChange)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -2653,16 +3014,15 @@ void DocumentChange::Swap(DocumentChange* other) {
 }
 void DocumentChange::InternalSwap(DocumentChange* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   target_ids_.InternalSwap(&other->target_ids_);
   removed_target_ids_.InternalSwap(&other->removed_target_ids_);
   swap(document_, other->document_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata DocumentChange::GetMetadata() const {
-  protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_google_2ffirestore_2fv1_2fwrite_2eproto);
+  return ::file_level_metadata_google_2ffirestore_2fv1_2fwrite_2eproto[kIndexInFileMessages];
 }
 
 
@@ -2672,11 +3032,20 @@ void DocumentDelete::InitAsDefaultInstance() {
   ::google::firestore::v1::_DocumentDelete_default_instance_._instance.get_mutable()->read_time_ = const_cast< ::google::protobuf::Timestamp*>(
       ::google::protobuf::Timestamp::internal_default_instance());
 }
+class DocumentDelete::HasBitSetters {
+ public:
+  static const ::google::protobuf::Timestamp& read_time(const DocumentDelete* msg);
+};
+
+const ::google::protobuf::Timestamp&
+DocumentDelete::HasBitSetters::read_time(const DocumentDelete* msg) {
+  return *msg->read_time_;
+}
 void DocumentDelete::clear_read_time() {
-  if (GetArenaNoVirtual() == NULL && read_time_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && read_time_ != nullptr) {
     delete read_time_;
   }
-  read_time_ = NULL;
+  read_time_ = nullptr;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int DocumentDelete::kDocumentFieldNumber;
@@ -2685,18 +3054,14 @@ const int DocumentDelete::kReadTimeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 DocumentDelete::DocumentDelete()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentDelete();
-  }
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:google.firestore.v1.DocumentDelete)
 }
 DocumentDelete::DocumentDelete(const DocumentDelete& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      removed_target_ids_(from.removed_target_ids_),
-      _cached_size_(0) {
+      _internal_metadata_(nullptr),
+      removed_target_ids_(from.removed_target_ids_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   document_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.document().size() > 0) {
@@ -2705,15 +3070,16 @@ DocumentDelete::DocumentDelete(const DocumentDelete& from)
   if (from.has_read_time()) {
     read_time_ = new ::google::protobuf::Timestamp(*from.read_time_);
   } else {
-    read_time_ = NULL;
+    read_time_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:google.firestore.v1.DocumentDelete)
 }
 
 void DocumentDelete::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_DocumentDelete_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   document_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  read_time_ = NULL;
-  _cached_size_ = 0;
+  read_time_ = nullptr;
 }
 
 DocumentDelete::~DocumentDelete() {
@@ -2727,27 +3093,13 @@ void DocumentDelete::SharedDtor() {
 }
 
 void DocumentDelete::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* DocumentDelete::descriptor() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const DocumentDelete& DocumentDelete::default_instance() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentDelete();
+  ::google::protobuf::internal::InitSCC(&::scc_info_DocumentDelete_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   return *internal_default_instance();
 }
 
-DocumentDelete* DocumentDelete::New(::google::protobuf::Arena* arena) const {
-  DocumentDelete* n = new DocumentDelete;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void DocumentDelete::Clear() {
 // @@protoc_insertion_point(message_clear_start:google.firestore.v1.DocumentDelete)
@@ -2757,27 +3109,112 @@ void DocumentDelete::Clear() {
 
   removed_target_ids_.Clear();
   document_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && read_time_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && read_time_ != nullptr) {
     delete read_time_;
   }
-  read_time_ = NULL;
+  read_time_ = nullptr;
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* DocumentDelete::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<DocumentDelete*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // string document = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("google.firestore.v1.DocumentDelete.document");
+        object = msg->mutable_document();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // .google.protobuf.Timestamp read_time = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::Timestamp::_InternalParse;
+        object = msg->mutable_read_time();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // repeated int32 removed_target_ids = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) == 50) {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::google::protobuf::internal::PackedInt32Parser;
+          object = msg->mutable_removed_target_ids();
+          if (size > end - ptr) goto len_delim_till_end;
+          auto newend = ptr + size;
+          if (size) ptr = parser_till_end(ptr, newend, object, ctx);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr == newend);
+          break;
+        } else if (static_cast<::google::protobuf::uint8>(tag) != 48) goto handle_unusual;
+        do {
+          msg->add_removed_target_ids(::google::protobuf::internal::ReadVarint(&ptr));
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 48 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool DocumentDelete::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:google.firestore.v1.DocumentDelete)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string document = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_document()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -2792,8 +3229,7 @@ bool DocumentDelete::MergePartialFromCodedStream(
 
       // .google.protobuf.Timestamp read_time = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_read_time()));
         } else {
@@ -2804,14 +3240,11 @@ bool DocumentDelete::MergePartialFromCodedStream(
 
       // repeated int32 removed_target_ids = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, this->mutable_removed_target_ids())));
-        } else if (
-            static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(48u /* 48 & 0xFF */)) {
+        } else if (static_cast< ::google::protobuf::uint8>(tag) == (48 & 0xFF)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  1, 50u, input, this->mutable_removed_target_ids())));
@@ -2840,6 +3273,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void DocumentDelete::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -2860,30 +3294,29 @@ void DocumentDelete::SerializeWithCachedSizes(
   // .google.protobuf.Timestamp read_time = 4;
   if (this->has_read_time()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, *this->read_time_, output);
+      4, HasBitSetters::read_time(this), output);
   }
 
   // repeated int32 removed_target_ids = 6;
   if (this->removed_target_ids_size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteTag(6, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
-        _removed_target_ids_cached_byte_size_));
+    output->WriteVarint32(_removed_target_ids_cached_byte_size_.load(
+        std::memory_order_relaxed));
   }
   for (int i = 0, n = this->removed_target_ids_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32NoTag(
       this->removed_target_ids(i), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:google.firestore.v1.DocumentDelete)
 }
 
 ::google::protobuf::uint8* DocumentDelete::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:google.firestore.v1.DocumentDelete)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2903,7 +3336,7 @@ void DocumentDelete::SerializeWithCachedSizes(
   if (this->has_read_time()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        4, *this->read_time_, deterministic, target);
+        4, HasBitSetters::read_time(this), target);
   }
 
   // repeated int32 removed_target_ids = 6;
@@ -2913,15 +3346,15 @@ void DocumentDelete::SerializeWithCachedSizes(
       ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
       target);
     target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        static_cast< ::google::protobuf::int32>(
-            _removed_target_ids_cached_byte_size_), target);
+        _removed_target_ids_cached_byte_size_.load(std::memory_order_relaxed),
+         target);
     target = ::google::protobuf::internal::WireFormatLite::
       WriteInt32NoTagToArray(this->removed_target_ids_, target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:google.firestore.v1.DocumentDelete)
   return target;
@@ -2931,11 +3364,15 @@ size_t DocumentDelete::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:google.firestore.v1.DocumentDelete)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated int32 removed_target_ids = 6;
   {
     size_t data_size = ::google::protobuf::internal::WireFormatLite::
@@ -2943,12 +3380,11 @@ size_t DocumentDelete::ByteSizeLong() const {
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast< ::google::protobuf::int32>(data_size));
+            static_cast<::google::protobuf::int32>(data_size));
     }
     int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _removed_target_ids_cached_byte_size_ = cached_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+    _removed_target_ids_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
@@ -2963,13 +3399,11 @@ size_t DocumentDelete::ByteSizeLong() const {
   if (this->has_read_time()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->read_time_);
+        *read_time_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -2977,9 +3411,9 @@ void DocumentDelete::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:google.firestore.v1.DocumentDelete)
   GOOGLE_DCHECK_NE(&from, this);
   const DocumentDelete* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const DocumentDelete>(
+      ::google::protobuf::DynamicCastToGenerated<DocumentDelete>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:google.firestore.v1.DocumentDelete)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -3029,16 +3463,16 @@ void DocumentDelete::Swap(DocumentDelete* other) {
 }
 void DocumentDelete::InternalSwap(DocumentDelete* other) {
   using std::swap;
-  removed_target_ids_.InternalSwap(&other->removed_target_ids_);
-  document_.Swap(&other->document_);
-  swap(read_time_, other->read_time_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
+  removed_target_ids_.InternalSwap(&other->removed_target_ids_);
+  document_.Swap(&other->document_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(read_time_, other->read_time_);
 }
 
 ::google::protobuf::Metadata DocumentDelete::GetMetadata() const {
-  protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_google_2ffirestore_2fv1_2fwrite_2eproto);
+  return ::file_level_metadata_google_2ffirestore_2fv1_2fwrite_2eproto[kIndexInFileMessages];
 }
 
 
@@ -3048,11 +3482,20 @@ void DocumentRemove::InitAsDefaultInstance() {
   ::google::firestore::v1::_DocumentRemove_default_instance_._instance.get_mutable()->read_time_ = const_cast< ::google::protobuf::Timestamp*>(
       ::google::protobuf::Timestamp::internal_default_instance());
 }
+class DocumentRemove::HasBitSetters {
+ public:
+  static const ::google::protobuf::Timestamp& read_time(const DocumentRemove* msg);
+};
+
+const ::google::protobuf::Timestamp&
+DocumentRemove::HasBitSetters::read_time(const DocumentRemove* msg) {
+  return *msg->read_time_;
+}
 void DocumentRemove::clear_read_time() {
-  if (GetArenaNoVirtual() == NULL && read_time_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && read_time_ != nullptr) {
     delete read_time_;
   }
-  read_time_ = NULL;
+  read_time_ = nullptr;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int DocumentRemove::kDocumentFieldNumber;
@@ -3061,18 +3504,14 @@ const int DocumentRemove::kReadTimeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 DocumentRemove::DocumentRemove()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentRemove();
-  }
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:google.firestore.v1.DocumentRemove)
 }
 DocumentRemove::DocumentRemove(const DocumentRemove& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      removed_target_ids_(from.removed_target_ids_),
-      _cached_size_(0) {
+      _internal_metadata_(nullptr),
+      removed_target_ids_(from.removed_target_ids_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   document_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.document().size() > 0) {
@@ -3081,15 +3520,16 @@ DocumentRemove::DocumentRemove(const DocumentRemove& from)
   if (from.has_read_time()) {
     read_time_ = new ::google::protobuf::Timestamp(*from.read_time_);
   } else {
-    read_time_ = NULL;
+    read_time_ = nullptr;
   }
   // @@protoc_insertion_point(copy_constructor:google.firestore.v1.DocumentRemove)
 }
 
 void DocumentRemove::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_DocumentRemove_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   document_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  read_time_ = NULL;
-  _cached_size_ = 0;
+  read_time_ = nullptr;
 }
 
 DocumentRemove::~DocumentRemove() {
@@ -3103,27 +3543,13 @@ void DocumentRemove::SharedDtor() {
 }
 
 void DocumentRemove::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* DocumentRemove::descriptor() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const DocumentRemove& DocumentRemove::default_instance() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsDocumentRemove();
+  ::google::protobuf::internal::InitSCC(&::scc_info_DocumentRemove_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   return *internal_default_instance();
 }
 
-DocumentRemove* DocumentRemove::New(::google::protobuf::Arena* arena) const {
-  DocumentRemove* n = new DocumentRemove;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void DocumentRemove::Clear() {
 // @@protoc_insertion_point(message_clear_start:google.firestore.v1.DocumentRemove)
@@ -3133,27 +3559,112 @@ void DocumentRemove::Clear() {
 
   removed_target_ids_.Clear();
   document_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && read_time_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && read_time_ != nullptr) {
     delete read_time_;
   }
-  read_time_ = NULL;
+  read_time_ = nullptr;
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* DocumentRemove::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<DocumentRemove*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // string document = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        ctx->extra_parse_data().SetFieldName("google.firestore.v1.DocumentRemove.document");
+        object = msg->mutable_document();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // repeated int32 removed_target_ids = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) == 18) {
+          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          parser_till_end = ::google::protobuf::internal::PackedInt32Parser;
+          object = msg->mutable_removed_target_ids();
+          if (size > end - ptr) goto len_delim_till_end;
+          auto newend = ptr + size;
+          if (size) ptr = parser_till_end(ptr, newend, object, ctx);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr == newend);
+          break;
+        } else if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        do {
+          msg->add_removed_target_ids(::google::protobuf::internal::ReadVarint(&ptr));
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          if (ptr >= end) break;
+        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 16 && (ptr += 1));
+        break;
+      }
+      // .google.protobuf.Timestamp read_time = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::Timestamp::_InternalParse;
+        object = msg->mutable_read_time();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool DocumentRemove::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:google.firestore.v1.DocumentRemove)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // string document = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_document()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
@@ -3168,14 +3679,11 @@ bool DocumentRemove::MergePartialFromCodedStream(
 
       // repeated int32 removed_target_ids = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, this->mutable_removed_target_ids())));
-        } else if (
-            static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+        } else if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  1, 18u, input, this->mutable_removed_target_ids())));
@@ -3187,8 +3695,7 @@ bool DocumentRemove::MergePartialFromCodedStream(
 
       // .google.protobuf.Timestamp read_time = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_read_time()));
         } else {
@@ -3216,6 +3723,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void DocumentRemove::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -3236,8 +3744,8 @@ void DocumentRemove::SerializeWithCachedSizes(
   // repeated int32 removed_target_ids = 2;
   if (this->removed_target_ids_size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteTag(2, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
-        _removed_target_ids_cached_byte_size_));
+    output->WriteVarint32(_removed_target_ids_cached_byte_size_.load(
+        std::memory_order_relaxed));
   }
   for (int i = 0, n = this->removed_target_ids_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32NoTag(
@@ -3247,19 +3755,18 @@ void DocumentRemove::SerializeWithCachedSizes(
   // .google.protobuf.Timestamp read_time = 4;
   if (this->has_read_time()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, *this->read_time_, output);
+      4, HasBitSetters::read_time(this), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:google.firestore.v1.DocumentRemove)
 }
 
 ::google::protobuf::uint8* DocumentRemove::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:google.firestore.v1.DocumentRemove)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3282,8 +3789,8 @@ void DocumentRemove::SerializeWithCachedSizes(
       ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
       target);
     target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-        static_cast< ::google::protobuf::int32>(
-            _removed_target_ids_cached_byte_size_), target);
+        _removed_target_ids_cached_byte_size_.load(std::memory_order_relaxed),
+         target);
     target = ::google::protobuf::internal::WireFormatLite::
       WriteInt32NoTagToArray(this->removed_target_ids_, target);
   }
@@ -3292,12 +3799,12 @@ void DocumentRemove::SerializeWithCachedSizes(
   if (this->has_read_time()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        4, *this->read_time_, deterministic, target);
+        4, HasBitSetters::read_time(this), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:google.firestore.v1.DocumentRemove)
   return target;
@@ -3307,11 +3814,15 @@ size_t DocumentRemove::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:google.firestore.v1.DocumentRemove)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // repeated int32 removed_target_ids = 2;
   {
     size_t data_size = ::google::protobuf::internal::WireFormatLite::
@@ -3319,12 +3830,11 @@ size_t DocumentRemove::ByteSizeLong() const {
     if (data_size > 0) {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::Int32Size(
-            static_cast< ::google::protobuf::int32>(data_size));
+            static_cast<::google::protobuf::int32>(data_size));
     }
     int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _removed_target_ids_cached_byte_size_ = cached_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+    _removed_target_ids_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
   }
 
@@ -3339,13 +3849,11 @@ size_t DocumentRemove::ByteSizeLong() const {
   if (this->has_read_time()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->read_time_);
+        *read_time_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -3353,9 +3861,9 @@ void DocumentRemove::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:google.firestore.v1.DocumentRemove)
   GOOGLE_DCHECK_NE(&from, this);
   const DocumentRemove* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const DocumentRemove>(
+      ::google::protobuf::DynamicCastToGenerated<DocumentRemove>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:google.firestore.v1.DocumentRemove)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -3405,16 +3913,16 @@ void DocumentRemove::Swap(DocumentRemove* other) {
 }
 void DocumentRemove::InternalSwap(DocumentRemove* other) {
   using std::swap;
-  removed_target_ids_.InternalSwap(&other->removed_target_ids_);
-  document_.Swap(&other->document_);
-  swap(read_time_, other->read_time_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
+  removed_target_ids_.InternalSwap(&other->removed_target_ids_);
+  document_.Swap(&other->document_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(read_time_, other->read_time_);
 }
 
 ::google::protobuf::Metadata DocumentRemove::GetMetadata() const {
-  protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_google_2ffirestore_2fv1_2fwrite_2eproto);
+  return ::file_level_metadata_google_2ffirestore_2fv1_2fwrite_2eproto[kIndexInFileMessages];
 }
 
 
@@ -3422,23 +3930,23 @@ void DocumentRemove::InternalSwap(DocumentRemove* other) {
 
 void ExistenceFilter::InitAsDefaultInstance() {
 }
+class ExistenceFilter::HasBitSetters {
+ public:
+};
+
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int ExistenceFilter::kTargetIdFieldNumber;
 const int ExistenceFilter::kCountFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 ExistenceFilter::ExistenceFilter()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsExistenceFilter();
-  }
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:google.firestore.v1.ExistenceFilter)
 }
 ExistenceFilter::ExistenceFilter(const ExistenceFilter& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&target_id_, &from.target_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&count_) -
@@ -3450,7 +3958,6 @@ void ExistenceFilter::SharedCtor() {
   ::memset(&target_id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&count_) -
       reinterpret_cast<char*>(&target_id_)) + sizeof(count_));
-  _cached_size_ = 0;
 }
 
 ExistenceFilter::~ExistenceFilter() {
@@ -3462,27 +3969,13 @@ void ExistenceFilter::SharedDtor() {
 }
 
 void ExistenceFilter::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* ExistenceFilter::descriptor() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const ExistenceFilter& ExistenceFilter::default_instance() {
-  ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::InitDefaultsExistenceFilter();
+  ::google::protobuf::internal::InitSCC(&::scc_info_ExistenceFilter_google_2ffirestore_2fv1_2fwrite_2eproto.base);
   return *internal_default_instance();
 }
 
-ExistenceFilter* ExistenceFilter::New(::google::protobuf::Arena* arena) const {
-  ExistenceFilter* n = new ExistenceFilter;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void ExistenceFilter::Clear() {
 // @@protoc_insertion_point(message_clear_start:google.firestore.v1.ExistenceFilter)
@@ -3496,20 +3989,63 @@ void ExistenceFilter::Clear() {
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ExistenceFilter::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<ExistenceFilter*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // int32 target_id = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_target_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int32 count = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        msg->set_count(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool ExistenceFilter::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:google.firestore.v1.ExistenceFilter)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // int32 target_id = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -3522,8 +4058,7 @@ bool ExistenceFilter::MergePartialFromCodedStream(
 
       // int32 count = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -3553,6 +4088,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void ExistenceFilter::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -3570,16 +4106,15 @@ void ExistenceFilter::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->count(), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:google.firestore.v1.ExistenceFilter)
 }
 
 ::google::protobuf::uint8* ExistenceFilter::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:google.firestore.v1.ExistenceFilter)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3594,9 +4129,9 @@ void ExistenceFilter::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->count(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:google.firestore.v1.ExistenceFilter)
   return target;
@@ -3606,11 +4141,15 @@ size_t ExistenceFilter::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:google.firestore.v1.ExistenceFilter)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // int32 target_id = 1;
   if (this->target_id() != 0) {
     total_size += 1 +
@@ -3626,9 +4165,7 @@ size_t ExistenceFilter::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -3636,9 +4173,9 @@ void ExistenceFilter::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:google.firestore.v1.ExistenceFilter)
   GOOGLE_DCHECK_NE(&from, this);
   const ExistenceFilter* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const ExistenceFilter>(
+      ::google::protobuf::DynamicCastToGenerated<ExistenceFilter>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:google.firestore.v1.ExistenceFilter)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -3686,15 +4223,14 @@ void ExistenceFilter::Swap(ExistenceFilter* other) {
 }
 void ExistenceFilter::InternalSwap(ExistenceFilter* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(target_id_, other->target_id_);
   swap(count_, other->count_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ExistenceFilter::GetMetadata() const {
-  protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_google_2ffirestore_2fv1_2fwrite_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_google_2ffirestore_2fv1_2fwrite_2eproto);
+  return ::file_level_metadata_google_2ffirestore_2fv1_2fwrite_2eproto[kIndexInFileMessages];
 }
 
 
@@ -3702,5 +4238,34 @@ void ExistenceFilter::InternalSwap(ExistenceFilter* other) {
 }  // namespace v1
 }  // namespace firestore
 }  // namespace google
+namespace google {
+namespace protobuf {
+template<> PROTOBUF_NOINLINE ::google::firestore::v1::Write* Arena::CreateMaybeMessage< ::google::firestore::v1::Write >(Arena* arena) {
+  return Arena::CreateInternal< ::google::firestore::v1::Write >(arena);
+}
+template<> PROTOBUF_NOINLINE ::google::firestore::v1::DocumentTransform_FieldTransform* Arena::CreateMaybeMessage< ::google::firestore::v1::DocumentTransform_FieldTransform >(Arena* arena) {
+  return Arena::CreateInternal< ::google::firestore::v1::DocumentTransform_FieldTransform >(arena);
+}
+template<> PROTOBUF_NOINLINE ::google::firestore::v1::DocumentTransform* Arena::CreateMaybeMessage< ::google::firestore::v1::DocumentTransform >(Arena* arena) {
+  return Arena::CreateInternal< ::google::firestore::v1::DocumentTransform >(arena);
+}
+template<> PROTOBUF_NOINLINE ::google::firestore::v1::WriteResult* Arena::CreateMaybeMessage< ::google::firestore::v1::WriteResult >(Arena* arena) {
+  return Arena::CreateInternal< ::google::firestore::v1::WriteResult >(arena);
+}
+template<> PROTOBUF_NOINLINE ::google::firestore::v1::DocumentChange* Arena::CreateMaybeMessage< ::google::firestore::v1::DocumentChange >(Arena* arena) {
+  return Arena::CreateInternal< ::google::firestore::v1::DocumentChange >(arena);
+}
+template<> PROTOBUF_NOINLINE ::google::firestore::v1::DocumentDelete* Arena::CreateMaybeMessage< ::google::firestore::v1::DocumentDelete >(Arena* arena) {
+  return Arena::CreateInternal< ::google::firestore::v1::DocumentDelete >(arena);
+}
+template<> PROTOBUF_NOINLINE ::google::firestore::v1::DocumentRemove* Arena::CreateMaybeMessage< ::google::firestore::v1::DocumentRemove >(Arena* arena) {
+  return Arena::CreateInternal< ::google::firestore::v1::DocumentRemove >(arena);
+}
+template<> PROTOBUF_NOINLINE ::google::firestore::v1::ExistenceFilter* Arena::CreateMaybeMessage< ::google::firestore::v1::ExistenceFilter >(Arena* arena) {
+  return Arena::CreateInternal< ::google::firestore::v1::ExistenceFilter >(arena);
+}
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>

@@ -22,47 +22,36 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
-#include <google/protobuf/stubs/port.h>
-#include <google/protobuf/stubs/once.h>
 #include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
-// This is a temporary google only hack
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-#include "third_party/protobuf/version.h"
-#endif
 // @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
+
+extern PROTOBUF_INTERNAL_EXPORT_google_2ffirestore_2fv1_2ffirestore_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Target_DocumentsTarget_google_2ffirestore_2fv1_2ffirestore_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2ffirestore_2fv1_2ffirestore_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_Target_QueryTarget_google_2ffirestore_2fv1_2ffirestore_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2ftimestamp_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto;
 namespace firestore {
 namespace client {
 class TargetDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<Target>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<Target> _instance;
   const ::google::firestore::v1::Target_QueryTarget* query_;
   const ::google::firestore::v1::Target_DocumentsTarget* documents_;
 } _Target_default_instance_;
 class TargetGlobalDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<TargetGlobal>
-      _instance;
+  ::google::protobuf::internal::ExplicitlyConstructed<TargetGlobal> _instance;
 } _TargetGlobal_default_instance_;
 }  // namespace client
 }  // namespace firestore
-namespace protobuf_firestore_2flocal_2ftarget_2eproto {
-void InitDefaultsTargetImpl() {
+static void InitDefaultsTarget_firestore_2flocal_2ftarget_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_google_2fprotobuf_2ftimestamp_2eproto::InitDefaultsTimestamp();
-  protobuf_google_2ffirestore_2fv1_2ffirestore_2eproto::InitDefaultsTarget_QueryTarget();
-  protobuf_google_2ffirestore_2fv1_2ffirestore_2eproto::InitDefaultsTarget_DocumentsTarget();
   {
     void* ptr = &::firestore::client::_Target_default_instance_;
     new (ptr) ::firestore::client::Target();
@@ -71,20 +60,15 @@ void InitDefaultsTargetImpl() {
   ::firestore::client::Target::InitAsDefaultInstance();
 }
 
-void InitDefaultsTarget() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsTargetImpl);
-}
+::google::protobuf::internal::SCCInfo<3> scc_info_Target_firestore_2flocal_2ftarget_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 3, InitDefaultsTarget_firestore_2flocal_2ftarget_2eproto}, {
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
+      &scc_info_Target_QueryTarget_google_2ffirestore_2fv1_2ffirestore_2eproto.base,
+      &scc_info_Target_DocumentsTarget_google_2ffirestore_2fv1_2ffirestore_2eproto.base,}};
 
-void InitDefaultsTargetGlobalImpl() {
+static void InitDefaultsTargetGlobal_firestore_2flocal_2ftarget_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_google_2fprotobuf_2ftimestamp_2eproto::InitDefaultsTimestamp();
   {
     void* ptr = &::firestore::client::_TargetGlobal_default_instance_;
     new (ptr) ::firestore::client::TargetGlobal();
@@ -93,37 +77,43 @@ void InitDefaultsTargetGlobalImpl() {
   ::firestore::client::TargetGlobal::InitAsDefaultInstance();
 }
 
-void InitDefaultsTargetGlobal() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsTargetGlobalImpl);
+::google::protobuf::internal::SCCInfo<1> scc_info_TargetGlobal_firestore_2flocal_2ftarget_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsTargetGlobal_firestore_2flocal_2ftarget_2eproto}, {
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,}};
+
+void InitDefaults_firestore_2flocal_2ftarget_2eproto() {
+  ::google::protobuf::internal::InitSCC(&scc_info_Target_firestore_2flocal_2ftarget_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_TargetGlobal_firestore_2flocal_2ftarget_2eproto.base);
 }
 
-::google::protobuf::Metadata file_level_metadata[2];
+::google::protobuf::Metadata file_level_metadata_firestore_2flocal_2ftarget_2eproto[2];
+constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_firestore_2flocal_2ftarget_2eproto = nullptr;
+constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_firestore_2flocal_2ftarget_2eproto = nullptr;
 
-const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+const ::google::protobuf::uint32 TableStruct_firestore_2flocal_2ftarget_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::Target, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::Target, _internal_metadata_),
   ~0u,  // no _extensions_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::Target, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::Target, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::Target, target_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::Target, snapshot_version_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::Target, resume_token_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::Target, last_listen_sequence_number_),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::Target, target_id_),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::Target, snapshot_version_),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::Target, resume_token_),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::Target, last_listen_sequence_number_),
   offsetof(::firestore::client::TargetDefaultTypeInternal, query_),
   offsetof(::firestore::client::TargetDefaultTypeInternal, documents_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::Target, target_type_),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::Target, target_type_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::TargetGlobal, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::TargetGlobal, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::TargetGlobal, highest_target_id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::TargetGlobal, highest_listen_sequence_number_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::TargetGlobal, last_remote_snapshot_version_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::firestore::client::TargetGlobal, target_count_),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::TargetGlobal, highest_target_id_),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::TargetGlobal, highest_listen_sequence_number_),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::TargetGlobal, last_remote_snapshot_version_),
+  PROTOBUF_FIELD_OFFSET(::firestore::client::TargetGlobal, target_count_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::firestore::client::Target)},
   { 12, -1, sizeof(::firestore::client::TargetGlobal)},
 };
@@ -133,64 +123,47 @@ static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::firestore::client::_TargetGlobal_default_instance_),
 };
 
-void protobuf_AssignDescriptors() {
-  AddDescriptors();
-  ::google::protobuf::MessageFactory* factory = NULL;
-  AssignDescriptors(
-      "firestore/local/target.proto", schemas, file_default_instances, TableStruct::offsets, factory,
-      file_level_metadata, NULL, NULL);
-}
+::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_firestore_2flocal_2ftarget_2eproto = {
+  {}, AddDescriptors_firestore_2flocal_2ftarget_2eproto, "firestore/local/target.proto", schemas,
+  file_default_instances, TableStruct_firestore_2flocal_2ftarget_2eproto::offsets,
+  file_level_metadata_firestore_2flocal_2ftarget_2eproto, 2, file_level_enum_descriptors_firestore_2flocal_2ftarget_2eproto, file_level_service_descriptors_firestore_2flocal_2ftarget_2eproto,
+};
 
-void protobuf_AssignDescriptorsOnce() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
-}
+const char descriptor_table_protodef_firestore_2flocal_2ftarget_2eproto[] =
+  "\n\034firestore/local/target.proto\022\020firestor"
+  "e.client\032#google/firestore/v1/firestore."
+  "proto\032\037google/protobuf/timestamp.proto\"\227"
+  "\002\n\006Target\022\021\n\ttarget_id\030\001 \001(\005\0224\n\020snapshot"
+  "_version\030\002 \001(\0132\032.google.protobuf.Timesta"
+  "mp\022\024\n\014resume_token\030\003 \001(\014\022#\n\033last_listen_"
+  "sequence_number\030\004 \001(\003\0228\n\005query\030\005 \001(\0132\'.g"
+  "oogle.firestore.v1.Target.QueryTargetH\000\022"
+  "@\n\tdocuments\030\006 \001(\0132+.google.firestore.v1"
+  ".Target.DocumentsTargetH\000B\r\n\013target_type"
+  "\"\251\001\n\014TargetGlobal\022\031\n\021highest_target_id\030\001"
+  " \001(\005\022&\n\036highest_listen_sequence_number\030\002"
+  " \001(\003\022@\n\034last_remote_snapshot_version\030\003 \001"
+  "(\0132\032.google.protobuf.Timestamp\022\024\n\014target"
+  "_count\030\004 \001(\005B/\n#com.google.firebase.fire"
+  "store.protoP\001\242\002\005FSTPBb\006proto3"
+  ;
+::google::protobuf::internal::DescriptorTable descriptor_table_firestore_2flocal_2ftarget_2eproto = {
+  false, InitDefaults_firestore_2flocal_2ftarget_2eproto, 
+  descriptor_table_protodef_firestore_2flocal_2ftarget_2eproto,
+  "firestore/local/target.proto", &assign_descriptors_table_firestore_2flocal_2ftarget_2eproto, 629,
+};
 
-void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
-void protobuf_RegisterTypes(const ::std::string&) {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 2);
-}
-
-void AddDescriptorsImpl() {
-  InitDefaults();
-  static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\034firestore/local/target.proto\022\020firestor"
-      "e.client\032#google/firestore/v1/firestore."
-      "proto\032\037google/protobuf/timestamp.proto\"\227"
-      "\002\n\006Target\022\021\n\ttarget_id\030\001 \001(\005\0224\n\020snapshot"
-      "_version\030\002 \001(\0132\032.google.protobuf.Timesta"
-      "mp\022\024\n\014resume_token\030\003 \001(\014\022#\n\033last_listen_"
-      "sequence_number\030\004 \001(\003\0228\n\005query\030\005 \001(\0132\'.g"
-      "oogle.firestore.v1.Target.QueryTargetH\000\022"
-      "@\n\tdocuments\030\006 \001(\0132+.google.firestore.v1"
-      ".Target.DocumentsTargetH\000B\r\n\013target_type"
-      "\"\251\001\n\014TargetGlobal\022\031\n\021highest_target_id\030\001"
-      " \001(\005\022&\n\036highest_listen_sequence_number\030\002"
-      " \001(\003\022@\n\034last_remote_snapshot_version\030\003 \001"
-      "(\0132\032.google.protobuf.Timestamp\022\024\n\014target"
-      "_count\030\004 \001(\005B/\n#com.google.firebase.fire"
-      "store.protoP\001\242\002\005FSTPBb\006proto3"
+void AddDescriptors_firestore_2flocal_2ftarget_2eproto() {
+  static constexpr ::google::protobuf::internal::InitFunc deps[2] =
+  {
+    ::AddDescriptors_google_2ffirestore_2fv1_2ffirestore_2eproto,
+    ::AddDescriptors_google_2fprotobuf_2ftimestamp_2eproto,
   };
-  ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 629);
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
-    "firestore/local/target.proto", &protobuf_RegisterTypes);
-  ::protobuf_google_2ffirestore_2fv1_2ffirestore_2eproto::AddDescriptors();
-  ::protobuf_google_2fprotobuf_2ftimestamp_2eproto::AddDescriptors();
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_firestore_2flocal_2ftarget_2eproto, deps, 2);
 }
 
-void AddDescriptors() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
-}
-// Force AddDescriptors() to be called at dynamic initialization time.
-struct StaticDescriptorInitializer {
-  StaticDescriptorInitializer() {
-    AddDescriptors();
-  }
-} static_descriptor_initializer;
-}  // namespace protobuf_firestore_2flocal_2ftarget_2eproto
+// Force running AddDescriptors() at dynamic initialization time.
+static bool dynamic_init_dummy_firestore_2flocal_2ftarget_2eproto = []() { AddDescriptors_firestore_2flocal_2ftarget_2eproto(); return true; }();
 namespace firestore {
 namespace client {
 
@@ -204,17 +177,36 @@ void Target::InitAsDefaultInstance() {
   ::firestore::client::_Target_default_instance_.documents_ = const_cast< ::google::firestore::v1::Target_DocumentsTarget*>(
       ::google::firestore::v1::Target_DocumentsTarget::internal_default_instance());
 }
+class Target::HasBitSetters {
+ public:
+  static const ::google::protobuf::Timestamp& snapshot_version(const Target* msg);
+  static const ::google::firestore::v1::Target_QueryTarget& query(const Target* msg);
+  static const ::google::firestore::v1::Target_DocumentsTarget& documents(const Target* msg);
+};
+
+const ::google::protobuf::Timestamp&
+Target::HasBitSetters::snapshot_version(const Target* msg) {
+  return *msg->snapshot_version_;
+}
+const ::google::firestore::v1::Target_QueryTarget&
+Target::HasBitSetters::query(const Target* msg) {
+  return *msg->target_type_.query_;
+}
+const ::google::firestore::v1::Target_DocumentsTarget&
+Target::HasBitSetters::documents(const Target* msg) {
+  return *msg->target_type_.documents_;
+}
 void Target::clear_snapshot_version() {
-  if (GetArenaNoVirtual() == NULL && snapshot_version_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && snapshot_version_ != nullptr) {
     delete snapshot_version_;
   }
-  snapshot_version_ = NULL;
+  snapshot_version_ = nullptr;
 }
 void Target::set_allocated_query(::google::firestore::v1::Target_QueryTarget* query) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   clear_target_type();
   if (query) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
+    ::google::protobuf::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
       query = ::google::protobuf::internal::GetOwnedMessage(
           message_arena, query, submessage_arena);
@@ -234,7 +226,7 @@ void Target::set_allocated_documents(::google::firestore::v1::Target_DocumentsTa
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   clear_target_type();
   if (documents) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
+    ::google::protobuf::Arena* submessage_arena = nullptr;
     if (message_arena != submessage_arena) {
       documents = ::google::protobuf::internal::GetOwnedMessage(
           message_arena, documents, submessage_arena);
@@ -260,17 +252,13 @@ const int Target::kDocumentsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Target::Target()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_firestore_2flocal_2ftarget_2eproto::InitDefaultsTarget();
-  }
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:firestore.client.Target)
 }
 Target::Target(const Target& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   resume_token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.resume_token().size() > 0) {
@@ -279,7 +267,7 @@ Target::Target(const Target& from)
   if (from.has_snapshot_version()) {
     snapshot_version_ = new ::google::protobuf::Timestamp(*from.snapshot_version_);
   } else {
-    snapshot_version_ = NULL;
+    snapshot_version_ = nullptr;
   }
   ::memcpy(&last_listen_sequence_number_, &from.last_listen_sequence_number_,
     static_cast<size_t>(reinterpret_cast<char*>(&target_id_) -
@@ -302,12 +290,13 @@ Target::Target(const Target& from)
 }
 
 void Target::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_Target_firestore_2flocal_2ftarget_2eproto.base);
   resume_token_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&snapshot_version_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&target_id_) -
       reinterpret_cast<char*>(&snapshot_version_)) + sizeof(target_id_));
   clear_has_target_type();
-  _cached_size_ = 0;
 }
 
 Target::~Target() {
@@ -324,27 +313,13 @@ void Target::SharedDtor() {
 }
 
 void Target::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* Target::descriptor() {
-  ::protobuf_firestore_2flocal_2ftarget_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_firestore_2flocal_2ftarget_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const Target& Target::default_instance() {
-  ::protobuf_firestore_2flocal_2ftarget_2eproto::InitDefaultsTarget();
+  ::google::protobuf::internal::InitSCC(&::scc_info_Target_firestore_2flocal_2ftarget_2eproto.base);
   return *internal_default_instance();
 }
 
-Target* Target::New(::google::protobuf::Arena* arena) const {
-  Target* n = new Target;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void Target::clear_target_type() {
 // @@protoc_insertion_point(one_of_clear_start:firestore.client.Target)
@@ -372,10 +347,10 @@ void Target::Clear() {
   (void) cached_has_bits;
 
   resume_token_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == NULL && snapshot_version_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && snapshot_version_ != nullptr) {
     delete snapshot_version_;
   }
-  snapshot_version_ = NULL;
+  snapshot_version_ = nullptr;
   ::memset(&last_listen_sequence_number_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&target_id_) -
       reinterpret_cast<char*>(&last_listen_sequence_number_)) + sizeof(target_id_));
@@ -383,20 +358,124 @@ void Target::Clear() {
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* Target::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<Target*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // int32 target_id = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_target_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // .google.protobuf.Timestamp snapshot_version = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::Timestamp::_InternalParse;
+        object = msg->mutable_snapshot_version();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // bytes resume_token = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        object = msg->mutable_resume_token();
+        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
+          parser_till_end = ::google::protobuf::internal::GreedyStringParser;
+          goto string_till_end;
+        }
+        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheck(ptr, size, ctx));
+        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
+        ptr += size;
+        break;
+      }
+      // int64 last_listen_sequence_number = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
+        msg->set_last_listen_sequence_number(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // .google.firestore.v1.Target.QueryTarget query = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::Target_QueryTarget::_InternalParse;
+        object = msg->mutable_query();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // .google.firestore.v1.Target.DocumentsTarget documents = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::firestore::v1::Target_DocumentsTarget::_InternalParse;
+        object = msg->mutable_documents();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+string_till_end:
+  static_cast<::std::string*>(object)->clear();
+  static_cast<::std::string*>(object)->reserve(size);
+  goto len_delim_till_end;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool Target::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:firestore.client.Target)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // int32 target_id = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -409,8 +488,7 @@ bool Target::MergePartialFromCodedStream(
 
       // .google.protobuf.Timestamp snapshot_version = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_snapshot_version()));
         } else {
@@ -421,8 +499,7 @@ bool Target::MergePartialFromCodedStream(
 
       // bytes resume_token = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_resume_token()));
         } else {
@@ -433,8 +510,7 @@ bool Target::MergePartialFromCodedStream(
 
       // int64 last_listen_sequence_number = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -447,8 +523,7 @@ bool Target::MergePartialFromCodedStream(
 
       // .google.firestore.v1.Target.QueryTarget query = 5;
       case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_query()));
         } else {
@@ -459,8 +534,7 @@ bool Target::MergePartialFromCodedStream(
 
       // .google.firestore.v1.Target.DocumentsTarget documents = 6;
       case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_documents()));
         } else {
@@ -488,6 +562,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void Target::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -503,7 +578,7 @@ void Target::SerializeWithCachedSizes(
   // .google.protobuf.Timestamp snapshot_version = 2;
   if (this->has_snapshot_version()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->snapshot_version_, output);
+      2, HasBitSetters::snapshot_version(this), output);
   }
 
   // bytes resume_token = 3;
@@ -520,25 +595,24 @@ void Target::SerializeWithCachedSizes(
   // .google.firestore.v1.Target.QueryTarget query = 5;
   if (has_query()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, *target_type_.query_, output);
+      5, HasBitSetters::query(this), output);
   }
 
   // .google.firestore.v1.Target.DocumentsTarget documents = 6;
   if (has_documents()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, *target_type_.documents_, output);
+      6, HasBitSetters::documents(this), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:firestore.client.Target)
 }
 
 ::google::protobuf::uint8* Target::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:firestore.client.Target)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -552,7 +626,7 @@ void Target::SerializeWithCachedSizes(
   if (this->has_snapshot_version()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *this->snapshot_version_, deterministic, target);
+        2, HasBitSetters::snapshot_version(this), target);
   }
 
   // bytes resume_token = 3;
@@ -571,19 +645,19 @@ void Target::SerializeWithCachedSizes(
   if (has_query()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        5, *target_type_.query_, deterministic, target);
+        5, HasBitSetters::query(this), target);
   }
 
   // .google.firestore.v1.Target.DocumentsTarget documents = 6;
   if (has_documents()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        6, *target_type_.documents_, deterministic, target);
+        6, HasBitSetters::documents(this), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:firestore.client.Target)
   return target;
@@ -593,11 +667,15 @@ size_t Target::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:firestore.client.Target)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // bytes resume_token = 3;
   if (this->resume_token().size() > 0) {
     total_size += 1 +
@@ -609,7 +687,7 @@ size_t Target::ByteSizeLong() const {
   if (this->has_snapshot_version()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->snapshot_version_);
+        *snapshot_version_);
   }
 
   // int64 last_listen_sequence_number = 4;
@@ -646,9 +724,7 @@ size_t Target::ByteSizeLong() const {
     }
   }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -656,9 +732,9 @@ void Target::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:firestore.client.Target)
   GOOGLE_DCHECK_NE(&from, this);
   const Target* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Target>(
+      ::google::protobuf::DynamicCastToGenerated<Target>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:firestore.client.Target)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -726,19 +802,19 @@ void Target::Swap(Target* other) {
 }
 void Target::InternalSwap(Target* other) {
   using std::swap;
-  resume_token_.Swap(&other->resume_token_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  resume_token_.Swap(&other->resume_token_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
   swap(snapshot_version_, other->snapshot_version_);
   swap(last_listen_sequence_number_, other->last_listen_sequence_number_);
   swap(target_id_, other->target_id_);
   swap(target_type_, other->target_type_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Target::GetMetadata() const {
-  protobuf_firestore_2flocal_2ftarget_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_firestore_2flocal_2ftarget_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_firestore_2flocal_2ftarget_2eproto);
+  return ::file_level_metadata_firestore_2flocal_2ftarget_2eproto[kIndexInFileMessages];
 }
 
 
@@ -748,11 +824,20 @@ void TargetGlobal::InitAsDefaultInstance() {
   ::firestore::client::_TargetGlobal_default_instance_._instance.get_mutable()->last_remote_snapshot_version_ = const_cast< ::google::protobuf::Timestamp*>(
       ::google::protobuf::Timestamp::internal_default_instance());
 }
+class TargetGlobal::HasBitSetters {
+ public:
+  static const ::google::protobuf::Timestamp& last_remote_snapshot_version(const TargetGlobal* msg);
+};
+
+const ::google::protobuf::Timestamp&
+TargetGlobal::HasBitSetters::last_remote_snapshot_version(const TargetGlobal* msg) {
+  return *msg->last_remote_snapshot_version_;
+}
 void TargetGlobal::clear_last_remote_snapshot_version() {
-  if (GetArenaNoVirtual() == NULL && last_remote_snapshot_version_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && last_remote_snapshot_version_ != nullptr) {
     delete last_remote_snapshot_version_;
   }
-  last_remote_snapshot_version_ = NULL;
+  last_remote_snapshot_version_ = nullptr;
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int TargetGlobal::kHighestTargetIdFieldNumber;
@@ -762,22 +847,18 @@ const int TargetGlobal::kTargetCountFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 TargetGlobal::TargetGlobal()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_firestore_2flocal_2ftarget_2eproto::InitDefaultsTargetGlobal();
-  }
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:firestore.client.TargetGlobal)
 }
 TargetGlobal::TargetGlobal(const TargetGlobal& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
+      _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_last_remote_snapshot_version()) {
     last_remote_snapshot_version_ = new ::google::protobuf::Timestamp(*from.last_remote_snapshot_version_);
   } else {
-    last_remote_snapshot_version_ = NULL;
+    last_remote_snapshot_version_ = nullptr;
   }
   ::memcpy(&highest_listen_sequence_number_, &from.highest_listen_sequence_number_,
     static_cast<size_t>(reinterpret_cast<char*>(&target_count_) -
@@ -786,10 +867,11 @@ TargetGlobal::TargetGlobal(const TargetGlobal& from)
 }
 
 void TargetGlobal::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_TargetGlobal_firestore_2flocal_2ftarget_2eproto.base);
   ::memset(&last_remote_snapshot_version_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&target_count_) -
       reinterpret_cast<char*>(&last_remote_snapshot_version_)) + sizeof(target_count_));
-  _cached_size_ = 0;
 }
 
 TargetGlobal::~TargetGlobal() {
@@ -802,27 +884,13 @@ void TargetGlobal::SharedDtor() {
 }
 
 void TargetGlobal::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* TargetGlobal::descriptor() {
-  ::protobuf_firestore_2flocal_2ftarget_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_firestore_2flocal_2ftarget_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
 const TargetGlobal& TargetGlobal::default_instance() {
-  ::protobuf_firestore_2flocal_2ftarget_2eproto::InitDefaultsTargetGlobal();
+  ::google::protobuf::internal::InitSCC(&::scc_info_TargetGlobal_firestore_2flocal_2ftarget_2eproto.base);
   return *internal_default_instance();
 }
 
-TargetGlobal* TargetGlobal::New(::google::protobuf::Arena* arena) const {
-  TargetGlobal* n = new TargetGlobal;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
 
 void TargetGlobal::Clear() {
 // @@protoc_insertion_point(message_clear_start:firestore.client.TargetGlobal)
@@ -830,30 +898,96 @@ void TargetGlobal::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == NULL && last_remote_snapshot_version_ != NULL) {
+  if (GetArenaNoVirtual() == nullptr && last_remote_snapshot_version_ != nullptr) {
     delete last_remote_snapshot_version_;
   }
-  last_remote_snapshot_version_ = NULL;
+  last_remote_snapshot_version_ = nullptr;
   ::memset(&highest_listen_sequence_number_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&target_count_) -
       reinterpret_cast<char*>(&highest_listen_sequence_number_)) + sizeof(target_count_));
   _internal_metadata_.Clear();
 }
 
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* TargetGlobal::_InternalParse(const char* begin, const char* end, void* object,
+                  ::google::protobuf::internal::ParseContext* ctx) {
+  auto msg = static_cast<TargetGlobal*>(object);
+  ::google::protobuf::int32 size; (void)size;
+  int depth; (void)depth;
+  ::google::protobuf::uint32 tag;
+  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
+  auto ptr = begin;
+  while (ptr < end) {
+    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // int32 highest_target_id = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        msg->set_highest_target_id(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // int64 highest_listen_sequence_number = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 16) goto handle_unusual;
+        msg->set_highest_listen_sequence_number(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // .google.protobuf.Timestamp last_remote_snapshot_version = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
+        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        parser_till_end = ::google::protobuf::Timestamp::_InternalParse;
+        object = msg->mutable_last_remote_snapshot_version();
+        if (size > end - ptr) goto len_delim_till_end;
+        ptr += size;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
+            {parser_till_end, object}, ptr - size, ptr));
+        break;
+      }
+      // int32 target_count = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
+        msg->set_target_count(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->EndGroup(tag);
+          return ptr;
+        }
+        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
+          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
+        ptr = res.first;
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        if (res.second) return ptr;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+len_delim_till_end:
+  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
+                               {parser_till_end, object}, size);
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool TargetGlobal::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:firestore.client.TargetGlobal)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // int32 highest_target_id = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -866,8 +1000,7 @@ bool TargetGlobal::MergePartialFromCodedStream(
 
       // int64 highest_listen_sequence_number = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (16 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
@@ -880,8 +1013,7 @@ bool TargetGlobal::MergePartialFromCodedStream(
 
       // .google.protobuf.Timestamp last_remote_snapshot_version = 3;
       case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
                input, mutable_last_remote_snapshot_version()));
         } else {
@@ -892,8 +1024,7 @@ bool TargetGlobal::MergePartialFromCodedStream(
 
       // int32 target_count = 4;
       case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
@@ -923,6 +1054,7 @@ failure:
   return false;
 #undef DO_
 }
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void TargetGlobal::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
@@ -943,7 +1075,7 @@ void TargetGlobal::SerializeWithCachedSizes(
   // .google.protobuf.Timestamp last_remote_snapshot_version = 3;
   if (this->has_last_remote_snapshot_version()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *this->last_remote_snapshot_version_, output);
+      3, HasBitSetters::last_remote_snapshot_version(this), output);
   }
 
   // int32 target_count = 4;
@@ -951,16 +1083,15 @@ void TargetGlobal::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(4, this->target_count(), output);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+        _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:firestore.client.TargetGlobal)
 }
 
 ::google::protobuf::uint8* TargetGlobal::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
+    ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:firestore.client.TargetGlobal)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
@@ -979,7 +1110,7 @@ void TargetGlobal::SerializeWithCachedSizes(
   if (this->has_last_remote_snapshot_version()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, *this->last_remote_snapshot_version_, deterministic, target);
+        3, HasBitSetters::last_remote_snapshot_version(this), target);
   }
 
   // int32 target_count = 4;
@@ -987,9 +1118,9 @@ void TargetGlobal::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(4, this->target_count(), target);
   }
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+        _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:firestore.client.TargetGlobal)
   return target;
@@ -999,16 +1130,20 @@ size_t TargetGlobal::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:firestore.client.TargetGlobal)
   size_t total_size = 0;
 
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+  if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+        _internal_metadata_.unknown_fields());
   }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   // .google.protobuf.Timestamp last_remote_snapshot_version = 3;
   if (this->has_last_remote_snapshot_version()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->last_remote_snapshot_version_);
+        *last_remote_snapshot_version_);
   }
 
   // int64 highest_listen_sequence_number = 2;
@@ -1033,9 +1168,7 @@ size_t TargetGlobal::ByteSizeLong() const {
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  SetCachedSize(cached_size);
   return total_size;
 }
 
@@ -1043,9 +1176,9 @@ void TargetGlobal::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:firestore.client.TargetGlobal)
   GOOGLE_DCHECK_NE(&from, this);
   const TargetGlobal* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const TargetGlobal>(
+      ::google::protobuf::DynamicCastToGenerated<TargetGlobal>(
           &from);
-  if (source == NULL) {
+  if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:firestore.client.TargetGlobal)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
@@ -1099,22 +1232,32 @@ void TargetGlobal::Swap(TargetGlobal* other) {
 }
 void TargetGlobal::InternalSwap(TargetGlobal* other) {
   using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(last_remote_snapshot_version_, other->last_remote_snapshot_version_);
   swap(highest_listen_sequence_number_, other->highest_listen_sequence_number_);
   swap(highest_target_id_, other->highest_target_id_);
   swap(target_count_, other->target_count_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata TargetGlobal::GetMetadata() const {
-  protobuf_firestore_2flocal_2ftarget_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_firestore_2flocal_2ftarget_2eproto::file_level_metadata[kIndexInFileMessages];
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_firestore_2flocal_2ftarget_2eproto);
+  return ::file_level_metadata_firestore_2flocal_2ftarget_2eproto[kIndexInFileMessages];
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace client
 }  // namespace firestore
+namespace google {
+namespace protobuf {
+template<> PROTOBUF_NOINLINE ::firestore::client::Target* Arena::CreateMaybeMessage< ::firestore::client::Target >(Arena* arena) {
+  return Arena::CreateInternal< ::firestore::client::Target >(arena);
+}
+template<> PROTOBUF_NOINLINE ::firestore::client::TargetGlobal* Arena::CreateMaybeMessage< ::firestore::client::TargetGlobal >(Arena* arena) {
+  return Arena::CreateInternal< ::firestore::client::TargetGlobal >(arena);
+}
+}  // namespace protobuf
+}  // namespace google
 
 // @@protoc_insertion_point(global_scope)
+#include <google/protobuf/port_undef.inc>
