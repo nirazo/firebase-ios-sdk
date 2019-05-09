@@ -345,7 +345,7 @@ NS_SWIFT_NAME(InAppMessagingDisplayDelegate)
  * Called when the message's action button is followed by the user.
  * @param inAppMessage the message that was clicked.
  */
-- (void)messageClicked:(FIRInAppMessagingDisplayMessage *)inAppMessage __deprecated;
+- (void)messageClicked:(FIRInAppMessagingDisplayMessage *)inAppMessage;
 
 /**
  * Called when the message's action button is followed by the user.
